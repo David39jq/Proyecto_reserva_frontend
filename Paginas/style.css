@@ -223,3 +223,40 @@ nav .nav2{
     font-weight: 700;
 }
 
+/*Seccion 4*/
+
+.sec4{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sec4 .image img{
+    width: 40vw;
+    max-width: 700px;
+    margin-top: -50px;
+}
+
+.sec4 .content{
+    width: 50vw;
+    padding: 7%;
+}
+
+.sec4 .content h1{
+    color: rgb(57, 33, 55);
+    font-size: 55px;
+    margin-bottom: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.sec4 .content p{
+    color: rgb(109, 97, 110);
+    margin-bottom: 30px;
+
+}
+
+.sec4 h2{
+    font-family: Cedarville cursive, cursive;
+    font-size: 30px;
+    color: rgb(241, 147, 73);
+}

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -121,5 +123,42 @@ nav .nav2{
 .btn:hover{ /*:hocer se usa para que cuando pase el cursor cambie de color*/
     background-color: rgba(239, 121, 30, 0.712); /*el rgba se usa para poder usar la tecnica de la opacocidad caundo pase el cursos*/
     transform: translateX(20px);/*lo que se hace aqui es que caundo pase el cursos el boron de mueva*/
+}
 
+/*Seccion 2*/
+
+.sec2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+.sec2 .image img{
+    width: 40vw;
+    max-width: 600px;
+}
+
+.sec2 .content{
+    max-width: 40vw;
+}
+
+.sec2 h2{
+    font-family: Cedarville cursive, cursive;
+    font-size: 30px;
+    color: rgb(241, 147, 73);
+}
+
+.sec2 .content h1{
+    color: rgb(57, 33, 55);
+    font-size: 45px;
+    margin-bottom: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.sec2 .content p{
+    color: rgb(109, 97, 110);
+    margin-bottom: 30px;
+    font-size: 15px;
+    line-height: 20px;
 }

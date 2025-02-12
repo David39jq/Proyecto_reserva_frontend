@@ -162,3 +162,64 @@ nav .nav2{
     font-size: 15px;
     line-height: 20px;
 }
+
+/*Estilo seccion 3*/
+
+.sec3{
+    padding: 7% 5%;
+    text-align: center;
+
+}
+
+.sec3 h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 45px;
+}
+
+.sec3 .cardbox{
+    padding: 70px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card{
+    width: 270px;
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgba(254, 253, 209, 0.6);/*Lo que hace este elementos es crear sombras al rededor*/
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.card:hover{
+    box-shadow: 0 0 100px rgb(239, 122, 30);
+    transform: scale(1.02); /*Lo que hace es trasformas la tarjeta un poco mas grande*/
+}
+
+.card img{
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+.card h4, .card p, .card span{/*Se le dan todos los ajustes a todos estos elementos*/
+    text-align: left;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.card p{ /*Arreglar el desbordamiento de texto*/
+    font-size: 13px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /*este elemto doce que o pueden haber mas de 2 lineas*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card span{
+    color: rgb(241, 147, 73);
+    font-weight: 700;
+}
+

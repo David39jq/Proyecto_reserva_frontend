@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.reserve-container{
+    display: flex;
+    min-height: 100vh;
+    background: url(../../public/images/img8.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.reservation{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, white -100%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 70px;
+}
+
+.reservation form{
+    padding: 50px;
+    width: 60%;
+    backdrop-filter: blur(5px);/*hace qeu se desonfoqeu el fondo del formulario*/
+    background-color: rgba(255, 255, 255, 0.5); /*Darle opacidad al fondo del desenfoque*/
+}
+
+.reservation form h2{
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: rgb(239, 122, 30);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+.reservation form div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reservation form input, .reservation form textarea{
+    width: 50%;
+    padding: 15px;
+    margin: 5px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.reservation form textarea{
+    resize: none;
+    width: 100%;
+}
+
+.reservation form  .btn{
+    display: block;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 250px;
+    text-align: center;
+}
+
+.reservation form .btn:hover{
+    transform: translateX(0);
+}

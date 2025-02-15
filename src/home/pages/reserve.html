@@ -3,17 +3,18 @@
 
 <head>
     <link rel="stylesheet" href="../../styles/index.css">
-    <link rel="stylesheet" href="../../styles/menu.css">
+    <link rel="stylesheet" href="../../styles/reserve.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
+    <title>Reservacion</title>
 </head>
 
 <body>
     <nav><!--elemento Para barra ade navegacion-->
+
         <div class="nav1">
             <a href="index.html">Inicio</a> <!--etiqueta de anclaje para enlaces-->
             <a href="menu.html">Menu</a>
@@ -36,46 +37,39 @@
             </div>
         </div>
     </nav>
-    <!--Seccion 1-->
-    <div class="menu"><!--Cuadro donde se almacena Todo el menu-->
-        <h1>Nuestro Menu</h1>
-        <div class="menu-box"><!--caja onde se almacenan las Tajetas del menu-->
-            <div class="menu-card"><!--tajeta del menu-->
-                <img src="../../../public/images/img3.png" alt="">
-                <h4>Nombre del plato</h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores consequatur a voluptatum tempore
-                    laudantium enim ad pariatur repellendus. Sequi, voluptates.</p>
-                <span>$ 20.000</span>
-            </div>
-            <div class="menu-card"><!--tajeta del menu-->
-                <img src="../../../public/images/img4.png" alt="">
-                <h4>Nombre del plato</h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores consequatur a voluptatum tempore
-                    laudantium enim ad pariatur repellendus. Sequi, voluptates.</p>
-                <span>$ 20.000</span>
-            </div>
-            <div class="menu-card"><!--tajeta del menu-->
-                <img src="../../../public/images/img5.png" alt="">
-                <h4>Nombre del plato</h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores consequatur a voluptatum tempore
-                    laudantium enim ad pariatur repellendus. Sequi, voluptates.</p>
-                <span>$ 20.000</span>
-            </div>
-            <div class="menu-card"><!--tajeta del menu-->
-                <img src="../../../public/images/img1.png" alt="">
-                <h4>Nombre del plato</h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores consequatur a voluptatum tempore
-                    laudantium enim ad pariatur repellendus. Sequi, voluptates.</p>
-                <span>$ 20.000</span>
-            </div>
+
+    <div class="reserve-container"><!--contenedor de las recervas-->
+        <div class="reservation">
+            <form>
+                <h2>Tu Reservacion</h2>
+
+                <div>
+                    <input type="text" placeholder="Ingresa tu nombre">
+                    <input type="text" placeholder="Ingresa tu email">
+                </div>
+
+                <div>
+                    <input type="date" placeholder="Elegir fecha">
+                    <input type="time" placeholder="Elegir hora">
+                </div>
+
+                <div>
+                    <textarea placeholder="Especificaciones" cols="30" rows="7"></textarea>
+                </div>
+
+                <div>
+                    <a href="#" class="btn">Reservar ahora</a>
+                </div>
+            </form>
 
         </div>
     </div>
-    <!--elemento de la seccion 6, pie de pagina-->
-    <div class="sec6">
+
+    <!--
+    <div class=" sec6">
         <div>
 
-            <img src="../public/images/official logo text bl.png" alt="">
+            <img src="../../../public/images/official logo text bl.png" alt="">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolore.</p>
         </div>
         <div>
@@ -107,6 +101,9 @@
     <div class="footer">
         <p>Copyright &copy; 2025 | Todos los derechos reservados</p>
     </div>
+    -->
+
+
 
 </body>
 

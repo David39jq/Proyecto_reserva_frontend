@@ -24,7 +24,14 @@
     box-sizing: border-box;
 }
 
+
+
 nav .nav1 a{
+    color: var(--white-smoke);
+}
+
+nav .nav2, 
+nav .nav2 a{
     color: var(--white-smoke);
 }
 

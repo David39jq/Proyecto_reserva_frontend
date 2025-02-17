@@ -1,6 +1,24 @@
-body{
-    background: linear-gradient(45deg, white, 70%, rgb(254, 233, 209));/*Darle difuminado en la pagina*/
+/* =============================
+			GLOBALS
+===============================*/
+:root {
+    --black: #000000;
+    --dark-teal: #011F26;
+    --dark-slate-gray: #044040;/*Titulos*/
+    --dark-slate-gray-rgba: rgba(4, 64, 64, 0.712); /*Botones:hover*/
+    --dark-goldernrod: #F2A71B;
+    --white-smoke: #F2F2F2;
+    --grey: rgba(66, 65, 65, 0.096);
+    --light-gray: rgb(109, 97, 110);
+    --dark-gray:rgb(128, 128, 128);
+    --dark-bronze: rgba(38, 44, 58, 1);
+    --light-orange: rgb(254, 233, 209);
 }
+
+body{
+    background: linear-gradient(45deg, var(--white-smoke), 70%, var(--light-orange));/*Darle difuminado en la pagina*/
+}
+
 
 .menu{
     text-align: center;
@@ -24,14 +42,14 @@ body{
     min-width: 270px;
     width: 270px;
     padding: 40px 20px;
-    background-color: white;
+    background-color: var(--white-smoke);
     padding-top: 0;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s;
     overflow: visible;
     margin-bottom: 100px;
-    box-shadow: 0 0 50px rgb(254, 233, 209);/*darle somra al la tarjeta*/
+    box-shadow: 0 0 50px var(--grey)/*darle somra al la tarjeta*/
 }
 
 .menu-card:hover img{
@@ -43,6 +61,11 @@ body{
     width: 180px;
     height: 180px;
     transition: all 0.3s;
+    border-radius: 15px;
+}
+
+.menu-card:hover{
+    box-shadow: 0 0 100px var(--light-orange);
 }
 
 .menu-card h4, .menu-card p, .menu-card span{
@@ -61,6 +84,6 @@ body{
 }
 
 .menu-card span{
-    color: rgb(241, 147, 73);
+    color: var(--dark-teal);
     font-weight: 700;
 }

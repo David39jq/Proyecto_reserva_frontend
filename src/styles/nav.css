@@ -1,21 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
-/* =============================
-			GLOBALS
-===============================*/
-
-:root {
-    --black: #000000;
-    --dark-teal: #011F26;
-    --dark-slate-gray: #044040;/*Titulos*/
-    --dark-slate-gray-rgba: rgba(4, 64, 64, 0.712); /*Botones:hover*/
-    --dark-goldernrod: #F2A71B;
-    --white-smoke: #F2F2F2;
-    --grey: rgba(66, 65, 65, 0.096);
-    --light-gray: rgb(109, 97, 110);
-    --dark-gray:rgb(128, 128, 128);
-    --dark-bronze: rgba(38, 44, 58, 1);
-}
-
 *{
     margin: 0;
     padding: 0;
@@ -31,29 +13,23 @@ body{
     background-color: var(--white-smoke);
 }
 
-.header{
-        background: var(--white-smoke);
-        height: 60px;
-        width: 80;     
-}
-
-
+/*Ajustes de la barra de navegacion*/
 nav{
     position: absolute;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     height: 10vh;
     background-color: transparent;
-    padding: 0 30px 0 150px;
 }
 
 nav .nav1 a{
     color: var(--black);
     font-size: 13px;
     padding-right: 20px;
-    transition: all 0.3s;    
+    transition: all 0.3s;   
+    
 }
 
 nav .nav1 a:hover{
@@ -73,11 +49,6 @@ nav .user{
     align-items: end;
 }
 
-/*-----------*/
-.Content{
-    flex-direction: row;
-    background-color: var(--white-smoke);
-}
 /*Arreglos de la primera seccion*/
 
 .sec1{

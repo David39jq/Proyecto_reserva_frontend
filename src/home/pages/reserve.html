@@ -13,59 +13,54 @@
 </head>
 
 <body>
-    <nav><!--elemento Para barra ade navegacion-->
+    <div class="container">
+        <div class="header">
+            <nav><!--elemento Para barra ade navegacion-->
 
-        <div class="nav1">
-            <a href="index.html">Inicio</a> <!--etiqueta de anclaje para enlaces-->
-            <a href="menu.html">Menu</a>
-            <a href="reserve.html">Reservacion</a>
-            <a href="nosotros.html">Nosostros</a>
+                <div class="nav1">
+                    <a href="index.html">Inicio</a> <!--etiqueta de anclaje para enlaces-->
+                    <a href="menu.html">Menu</a>
+                    <a href="reserve.html">Reservacion</a>
+                    <a href="nosotros.html">Nosostros</a>
+                </div>
+                <div class="user" id="id-user"><!--elemento de perfil usuario-->
+                    <a href="login.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Perfil</span>
+                    </a>
+                </div>
+            </nav>
         </div>
-        <div class="logo">
-            <img src="../images/official logo text bl.png" alt="">
-        </div>
-        <div id="nav2" class="nav2"><!--elemento de busqueda-->
-            <div class="search">
-                <input type="text" placeholder="Buscar">
-                <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="Content">
+            <div class="reserve-container"><!--contenedor de las recervas-->
+                <div class="reservation">
+                    <form>
+                        <h2>Tu Reservacion</h2>
+
+                        <div>
+                            <input type="text" placeholder="Ingresa tu nombre">
+                            <input type="text" placeholder="Ingresa tu email">
+                        </div>
+
+                        <div>
+                            <input type="date" placeholder="Elegir fecha">
+                            <input type="time" placeholder="Elegir hora">
+                        </div>
+
+                        <div>
+                            <textarea placeholder="Especificaciones" cols="30" rows="7"></textarea>
+                        </div>
+
+                        <div>
+                            <a href="#" class="btn">Reservar ahora</a>
+                        </div>
+                    </form>
+
+                </div>
             </div>
-            <div class="user"><!--elemento de perfil usuario-->
-                <a href="login.html">
-                    <i id="user-logo" class="fa-solid fa-user"></i>
-                    <span>Perfil</span>
-                </a>
-            </div>
         </div>
-    </nav>
-
-    <div class="reserve-container"><!--contenedor de las recervas-->
-        <div class="reservation">
-            <form>
-                <h2>Tu Reservacion</h2>
-
-                <div>
-                    <input type="text" placeholder="Ingresa tu nombre">
-                    <input type="text" placeholder="Ingresa tu email">
-                </div>
-
-                <div>
-                    <input type="date" placeholder="Elegir fecha">
-                    <input type="time" placeholder="Elegir hora">
-                </div>
-
-                <div>
-                    <textarea placeholder="Especificaciones" cols="30" rows="7"></textarea>
-                </div>
-
-                <div>
-                    <a href="#" class="btn">Reservar ahora</a>
-                </div>
-            </form>
-
-        </div>
+        <div class="Footer"></div>
     </div>
-
-
 
 </body>
 

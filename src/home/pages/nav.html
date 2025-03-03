@@ -1,21 +1,114 @@
-<div class="container">
-    <div class="header">
-        <nav><!--elemento Para barra ade navegacion-->
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/@codingnepal -->
+<html lang="es">
 
-            <div class="nav1">
-                <a href="index.html">Inicio</a> <!--etiqueta de anclaje para enlaces-->
-                <a href="menu.html">Menu</a>
-                <a href="reserve.html">Reservacion</a>
-                <a href="nosotros.html">Nosostros</a>
-            </div>
-            <div class="user" id="id-user"><!--elemento de perfil usuario-->
-                <a href="login.html">
-                    <i class="fa-solid fa-user"></i>
-                    <span>Perfil</span>
-                </a>
-            </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar with Dropdown Menu | CodingNepal</title>
+    <link rel="stylesheet" href="../../styles/nav.css" />
+    <!-- Linking Google Fonts for Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Mobile Sidebar Menu Button -->
+    <button class="sidebar-menu-button">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <aside class="sidebar">
+        <!-- Sidebar Header -->
+        <header class="sidebar-header">
+            <a href="#" class="header-logo">
+                <img src="../../../public/images/user-default.png" alt="CodingNepal" />
+            </a>
+            <button class="sidebar-toggler">
+                <span class="material-symbols-rounded">chevron_left</span>
+            </button>
+        </header>
+        <nav class="sidebar-nav">
+            <!-- Primary Top Nav -->
+            <ul class="nav-list primary-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-house"></i>
+                        <span class="nav-label">Inicio</span>
+                    </a>
+                </li>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown-container">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        <i class="fa-solid fa-utensils"></i>
+                        <span class="nav-label">Menu</span>
+                        <i class="fa-solid
+                        fa-chevron-down" id="chevron-down"></i>
+                    </a>
+                    <!-- Dropdown Menu -->
+                    <ul class="dropdown-menu">
+                        <li class="nav-item"><a class="nav-link dropdown-title">Menu</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link dropdown-link">Platos</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link dropdown-link">Bebidad</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span class="nav-label">Reservacion</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item"><a class="nav-link dropdown-title">Notifications</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-address-card"></i>
+                        <span class="nav-label">Nosotros</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item"><a class="nav-link dropdown-title">Resources</a></li>
+                    </ul>
+                </li>
+                <!-- Dropdown -->
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="material-symbols-rounded">settings</span>
+                        <span class="nav-label">Settings</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item"><a class="nav-link dropdown-title">Settings</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Secondary Bottom Nav -->
+            <ul class="nav-list secondary-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="material-symbols-rounded">help</span>
+                        <span class="nav-label">Support</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item"><a class="nav-link dropdown-title">Support</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="material-symbols-rounded">logout</span>
+                        <span class="nav-label">Sign Out</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item"><a class="nav-link dropdown-title">Sign Out</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
-    </div>
-    <div class="Content"></div>
-    <div class="Footer"></div>
-</div>
+    </aside>
+    <!-- Script -->
+    <script src="../js/js/nav.js"></script>
+</body>
+
+</html>

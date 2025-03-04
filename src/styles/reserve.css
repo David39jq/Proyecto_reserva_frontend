@@ -18,27 +18,9 @@
     --light-orange: rgb(254, 233, 209);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-
-nav .nav1 a{
-    color: var(--white-smoke);
-}
-
-nav .nav2, 
-nav .nav2 a{
-    color: var(--white-smoke);
-}
-
 .reserve-container{
     display: flex;
     min-height: 100vh;
-    background: url(../../public/images/img8.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -46,7 +28,6 @@ nav .nav2 a{
 .reservation{
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to bottom, var(--dark-teal) -100%, transparent);
     display: flex;
     align-items: center;
     justify-content: center;

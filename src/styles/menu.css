@@ -1,89 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 /* =============================
 			GLOBALS
 ===============================*/
 :root {
-    --black: #000000;
-    --dark-teal: #011F26;
-    --dark-slate-gray: #044040;/*Titulos*/
-    --dark-slate-gray-rgba: rgba(4, 64, 64, 0.712); /*Botones:hover*/
-    --dark-goldernrod: #F2A71B;
-    --white-smoke: #F2F2F2;
-    --grey: rgba(66, 65, 65, 0.096);
-    --light-gray: rgb(109, 97, 110);
-    --dark-gray:rgb(128, 128, 128);
-    --dark-bronze: rgba(38, 44, 58, 1);
-    --light-orange: rgb(254, 233, 209);
+  --black: #000000;
+  --dark-teal: #011F26;
+  --dark-teal-rgba: rgba(1, 31, 38, 0.9);
+  --dark-slate-gray: #044040;/*Titulos*/
+  --dark-slate-gray-rgba: rgba(4, 64, 64, 0.712); /*Botones:hover*/
+  --dark-goldernrod: #F2A71B;
+  --white-smoke: #F2F2F2;
+  --grey: rgba(66, 65, 65, 0.096);
+  --light-gray: rgb(109, 97, 110);
+  --dark-gray:rgb(128, 128, 128);
+  --dark-bronze: rgba(38, 44, 58, 1);
+  --light-orange: rgb(254, 233, 209);
+  --red: #ff0000;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.wrapper h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 75px; /* Ajusta este valor según necesites */
 }
 
 body{
-    background: linear-gradient(45deg, var(--white-smoke), 70%, var(--light-orange));/*Darle difuminado en la pagina*/
+  padding: 10px;
+  background: linear-gradient(45deg, var(--white-smoke), 70%, var(--light-orange));/*Darle difuminado en la pagina*/
+}
+.wrapper{
+  margin: 100px auto;
+  max-width: 1100px;
+}
+.wrapper nav{
+  display: flex;
+  justify-content: center;
+}
+.wrapper .items{
+  display: flex;
+  max-width: 550px;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
+.items span{
+  padding: 7px 25px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--dark-teal);
+  border-radius: 50px;
+  border: 2px solid var(--dark-slate-gray);
+  transition: all 0.3s ease;
+}
+
+.items span.active,
+.items span:hover{
+  color: var(--white-smoke);
+  background: var(--dark-slate-gray);
+}
+
+
+
+.gallery .image.hide{
+  display: none;
+}
+.gallery .image.show{
+  animation: animate 0.4s ease;
+}
+@keyframes animate {
+  0%{
+    transform: scale(0.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+.preview-box{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: var(--white-smoke);
+  max-width: 700px;
+  width: 100%;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 3px;
+  padding: 0 5px 5px 5px;
+  box-shadow: 0px 0px 15px var(--light-gray);
+}
+.preview-box.show{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s ease;
+}
+.preview-box .details{
+  padding: 13px 15px 13px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.details .title{
+  display: flex;
+  font-size: 18px;
+  font-weight: 400;
+}
+.details .title p{
+  font-weight: 500;
+  margin-left: 5px;
+}
+.details .icon{
+  color: var(--red);
+  font-style: 22px;
+  cursor: pointer;
+}
+.preview-box .image-box{
+  width: 100%;
+  display: flex;
+}
+.image-box img{
+  width: 100%;
+  border-radius: 0 0 3px 3px;
+}
+.shadow{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  display: none;
+  background: var(--dark-teal-rgba);
+}
+.shadow.show{
+  display: block;
+}
+
+/*============================
+    ARREGLO DE CARTAS MENUD
+============================*/
 
 .menu{
-    text-align: center;
-    padding-top: 130px;
-}
-
-.menu h1{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 45px;
+  text-align: center;
+  padding-top: 8px;
 }
 
 .menu .menu-box{
-    padding: 100px 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap; /*lo qeu hace esto es que las tarjetas no se distorcionen cuando la pantalla sea mas pequeña*/
+  padding: 100px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap; /*lo qeu hace esto es que las tarjetas no se distorcionen cuando la pantalla sea mas pequeña*/
 }
 
 .menu-card{
-    min-width: 270px;
-    width: 270px;
-    padding: 40px 20px;
-    background-color: var(--white-smoke);
-    padding-top: 0;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s;
-    overflow: visible;
-    margin-bottom: 100px;
-    box-shadow: 0 0 50px var(--grey)/*darle somra al la tarjeta*/
+  min-width: 270px;
+  width: 270px;
+  padding: 40px 20px;
+  background-color: var(--white-smoke);
+  padding-top: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  overflow: visible;
+  margin-bottom: 100px;
+  box-shadow: 0 0 50px var(--grey)/*darle somra al la tarjeta*/
 }
 
 .menu-card:hover img{
-    margin-top: -80px;
+  margin-top: -80px;
 
 }
 .menu-card img{
-    margin-bottom: 40px;
-    width: 180px;
-    height: 180px;
-    transition: all 0.3s;
-    border-radius: 15px;
+  margin-bottom: 40px;
+  width: 180px;
+  height: 180px;
+  transition: all 0.3s;
+  border-radius: 15px;
 }
 
 .menu-card:hover{
-    box-shadow: 0 0 100px var(--light-orange);
+  box-shadow: 0 0 100px var(--light-orange);
 }
 
 .menu-card h4, .menu-card p, .menu-card span{
-    text-align: left;
-    margin-bottom: 15px;
-    display: block;
+  text-align: left;
+  margin-bottom: 15px;
+  display: block;
 }
 
 .menu-card p{
-    font-size: 13px;
-    display: -webkit-box;        
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  font-size: 13px;
+  display: -webkit-box;        
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu-card span{
-    color: var(--dark-teal);
-    font-weight: 700;
+  color: var(--dark-teal);
+  font-weight: 700;
+}
+
+
+
+
+/*==================================
+    Responsive
+==================================*/
+@media (max-width: 1000px) {
+  .gallery .image{
+    width: calc(100% / 3);
+  }
+}
+@media (max-width: 800px) {
+  .gallery .image{
+    width: calc(100% / 2);
+  }
+}
+@media (max-width: 700px) {
+  .wrapper nav .items{
+    max-width: 600px;
+  }
+  nav .items span{
+    padding: 7px 15px;
+  }
+}
+@media (max-width: 600px) {
+  .wrapper{
+    margin: 30px auto;
+  }
+  .wrapper nav .items{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav .items span{
+    margin: 5px;
+  }
+  .gallery .image{
+    width: 100%;
+  }
 }

@@ -2,14 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
 :root {
   --black: #000000;
-  --dark-teal: #011F26;
+  --white-smoke: #F2F2F2;
   --dark-slate-gray: #044040;/*Titulos*/
+  --dark-teal: #033636;
   --dark-slate-gray-rgba: rgba(4, 64, 64, 0.712); /*Botones:hover*/
   --dark-goldernrod: #F2A71B;
-  --white-smoke: #F2F2F2;
+  --medium-gray:#808080;
+  --light-brown:#ffbf00;
+  --Beige:#F5F5DC;
+  --dark-bronze: rgba(38, 44, 58, 1);
+
+
   --grey: rgba(66, 65, 65, 0.096);
-  --light-gray: rgb(109, 97, 110);
-  --dark-gray:rgb(128, 128, 128);
   --dark-bronze: rgba(38, 44, 58, 1);
 }
 
@@ -39,7 +43,7 @@ background-color: transparent;
 }
 
 .logo img{
-  width: 200px;
+  width: 300px;
   align-items: center;
 }
 

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--========== BOX ICONS ==========-->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!--icons styles-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="styles.css">
+
+
+
+    <title>Responsive website food</title>
+</head>
+
+<body>
+
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bx-chevron-up scrolltop__icon'></i>
+    </a>
+
+    <!--========== HEADER ==========-->
+    <header class="l-header" id="header">
+        <nav class="nav bd-container">
+            <a href="#" class="nav__logo"><img src="public/images/logo5.jpg" alt=""></a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">INicio</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">Nosotros</a></li>
+                    <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
+                    <li class="nav__item"><a href="src/home/pages/reserve.html" class="nav__link">Reservacion</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contactos</a></li>
+
+                    <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--========== HOME ==========-->
+        <!--========== elemento de la seccion 1 ==========-->
+        <section class="home" id="home">
+            <div class="home__container bd-container bd-grid">
+                <div class="home__data">
+                    <h1 class="home__title">Déjate cautivar</h1>
+                    <h2 class="home__subtitle"> Prueba la mejor comida <br></h2>
+                    <a href="#" class="btn">Reserva ahora <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <!--imagen de la primera seccion-->
+                <img src="../../../public/images/img1.png" alt="" class="home__img">
+            </div>
+        </section>
+
+        <!--========== elemento de la seccion 2 ==========-->
+        <section class="about section bd-container" id="about">
+            <div class="about__container  bd-grid">
+                <div class="about__data">
+                    <span class="section-subtitle about__initial">Conocenos</span>
+                    <h2 class="section-title about__initial">Disfruta de una <br> experiencia inolvidable</h2>
+                    <p class="about__description">Cocinamos la mejor comida de toda la ciudad, con un excelente servicio
+                        al cliente, las mejores comidas y al mejor precio, visítanos</p>
+                    <a href="#" class="btn">Reserva ahora <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <img src="../../../public/images/img2.png" alt="" class="about__img">
+            </div>
+        </section>
+
+        <!--========== elemento de la seccion 3 ==========-->
+        <section class="menu section bd-container" id="menu">
+            <span class="section-subtitle">Menu</span>
+            <h2 class="section-title">Platos más destacados</h2>
+
+            <div class="menu__container bd-grid">
+
+                <div class="menu__content">
+                    <img src="../../../public/images/lomo-fino.jpg" alt="" class="menu__img">
+                    <h3 class="menu__name">Lomo Fino - Tierra Andina</h3>
+                    <span class="menu__detail">Delicious dish</span>
+                    <span class="menu__preci">$22.00</span>
+                </div>
+
+                <div class="menu__content">
+                    <img src="../../../public/images/lomo-fino.jpg" alt="" class="menu__img">
+                    <h3 class="menu__name">Barbecue salad</h3>
+                    <br>
+                    <span class="menu__detail">Delicious dish</span>
+                    <span class="menu__preci">$22.00</span>
+                </div>
+
+                <div class="menu__content">
+                    <img src="../../../public/images/lomo-fino.jpg" alt="" class="menu__img">
+                    <h3 class="menu__name">Salad with fish</h3>
+                    <br>
+                    <span class="menu__detail">Delicious dish</span>
+                    <span class="menu__preci">$12.00</span>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!--========== FOOTER ==========-->
+    <footer class="footer section bd-container">
+        <div class="footer__container bd-grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo"><img src="public/images/logo5.jpg" alt="s"></a>
+                <span class="footer__description">Restaurant</span>
+                <div>
+                    <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Services</h3>
+                <ul>
+                    <li><a href="#" class="footer__link">Delivery</a></li>
+                    <li><a href="#" class="footer__link">Pricing</a></li>
+                    <li><a href="#" class="footer__link">Fast food</a></li>
+                    <li><a href="#" class="footer__link">Reserve your spot</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Information</h3>
+                <ul>
+                    <li><a href="#" class="footer__link">Event</a></li>
+                    <li><a href="#" class="footer__link">Contact us</a></li>
+                    <li><a href="#" class="footer__link">Privacy policy</a></li>
+                    <li><a href="#" class="footer__link">Terms of services</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Adress</h3>
+                <ul>
+                    <li>Lima - Peru</li>
+                    <li>Jr Union #999</li>
+                    <li>999 - 888 - 777</li>
+                    <li>tastyfood@email.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="footer__copy">&#169; 2020 Bedimcode. All right reserved</p>
+    </footer>
+
+    <!--========== SCROLL REVEAL ==========-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--========== MAIN JS ==========-->
+
+</body>
+
+</html>

@@ -1,218 +1,172 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - youtube.com/@codingnepal -->
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restaurante</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--link styles-->
-    <link rel="stylesheet" href="../../styles/index.css">
-    <link rel="stylesheet" href="../../styles/nav.css">
+    <!--========== BOX ICONS ==========-->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <!--icons styles-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="../../styles/index.css">
+
+
+
+    <title>Restaurante</title>
 </head>
 
 <body>
-    <!-- Botón de menú de la barra lateral móvil -->
-    <button class="sidebar-menu-button">
-        <i class="fa-solid fa-chevron-left"></i>
-    </button>
-    <aside class="sidebar">
-        <!-- Encabezado de la barra lateral -->
-        <header class="sidebar-header">
-            <a href="index.html" class="header-logo">
-                <img src="../../../public/images/user-default.png" alt="CodingNepal" />
-            </a>
-            <button class="sidebar-toggler">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
-        </header>
-        <nav class="sidebar-nav">
-            <!-- Primary Top Nav -->
-            <ul class="nav-list primary-nav">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">
-                        <i class="fa-solid fa-house"></i>
-                        <span class="nav-label">Inicio</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="nav-item"><a class="nav-link dropdown-title">Inicio</a></li>
-                    </ul>
-                </li>
-                <!-- Dropdown -->
-                <li class="nav-item dropdown-container">
-                    <a href="menu.html" class="nav-link dropdown-toggle">
-                        <i class="fa-solid fa-utensils"></i>
-                        <span class="nav-label">Menu</span>
-                        <i class="fa-solid fa-chevron-down" id="chevron-down"></i>
-                    </a>
-                    <!-- Dropdown Menu -->
-                    <ul class="dropdown-menu">
-                        <li class="nav-item"><a class="nav-link dropdown-title">Menu</a></li>
-                        <li class="nav-item"><a href="menu.html" class="nav-link dropdown-link">Nuestro Menu</a></li>
-                        <li class="nav-item"><a href="menu.html" class="nav-link dropdown-link">Platos</a></li>
-                        <li class="nav-item"><a href="menu.html" class="nav-link dropdown-link">Bebidad</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="reserve.html" class="nav-link">
-                        <i class="fa-solid fa-calendar-days"></i>
-                        <span class="nav-label">Reservacion</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="nav-item"><a class="nav-link dropdown-title">Reservacion</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">
-                        <i class="fa-solid fa-address-card"></i>
-                        <span class="nav-label">Nosotros</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="nav-item"><a class="nav-link dropdown-title">Nosotros</a></li>
-                    </ul>
-                </li>
-                <!-- Menú desplegable -->
 
-                <li class="nav-item">
-                    <a href="login.html" class="nav-link">
-                        <i class="fa-solid fa-user"></i>
-                        <span class="nav-label">Mi Cuenta</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="nav-item"><a class="nav-link dropdown-title">Mi Cuenta</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <!-- Secondary Bottom Nav -->
-            <ul class="nav-list secondary-nav">
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="fa-solid fa-right-from-bracket"></i>
-                        <span class="nav-label">Salir</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="nav-item"><a class="nav-link dropdown-title">Salir</a></li>
-                    </ul>
-                </li>
-            </ul>
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bx-chevron-up scrolltop__icon'></i>
+    </a>
+
+    <!--========== HEADER ==========-->
+    <header class="l-header" id="header">
+        <nav class="nav bd-container">
+            <a href="#" class="nav__logo"><img src="public/images/logo5.jpg" alt=""></a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Inicio</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">Nosotros</a></li>
+                    <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
+                    <li class="nav__item"><a href="reserve.html" class="nav__link">Reservacion</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contactos</a></li>
+
+                    <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
         </nav>
-    </aside>
-    <div class="Content">
-        <div class="header" id="id-header">
-            <div class="header" id="id-header">
-                <nav><!--elemento Para barra ade navegacion-->
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="../../../public/images/logo5.jpg" alt="">
-                        </a>
-                    </div>
-                </nav>
-            </div>
-        </div>
-        <!--elemento de la seccion 1-->
-        <div class="sec1">
-            <div class="content">
-                <h1>Déjate cautivar por la deliciosa comida</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure optio harum non deleniti labore
-                    illo!
-                    Laborum autem quo tempore aliquid iusto dolorum nesciunt reiciendis saepe distinctio voluptatum
-                    beatae,
-                    mollitia amet?</p>
-                <a href="#" class="btn">Ordene ahora <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <div class="image"><!--imagen de la primera seccion-->
-                <img src="../../../public/images/img1.png" alt="">
-            </div>
-        </div>
-        <!--elemento de la seccion 2-->
-        <div class="sec2">
-            <div class="image">
-                <img src="../../../public/images/img2.png" alt="">
-            </div>
-            <div class="content">
-                <h2>Conócenos</h2>
-                <h1>Disfruta de una experiencia inolvidable</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo soluta tenetur eaque quo
-                    reiciendis dolore
-                    similique perferendis quia voluptate id hic, debitis quam ut commodi in? Possimus nobis eos
-                    veritatis.
-                </p>
+    </header>
 
+    <main class="l-main">
+        <!--========== HOME ==========-->
+        <!--========== elemento de la seccion 1 ==========-->
+        <section class="home" id="home">
+            <div class="home__container bd-container bd-grid">
+                <div class="home__data">
+                    <h1 class="home__title">Déjate cautivar</h1>
+                    <h2 class="home__subtitle"> Prueba la mejor comida <br></h2>
+                    <a href="#" class="button">Reserva ahora <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <!--imagen de la primera seccion-->
+                <img src="../../../public/images/img1.png" alt="" class="home__img">
             </div>
-        </div>
-        <!--elemento de la seccion 3-->
-        <div class="sec3">
-            <h1>Platos más destacados</h1>
+        </section>
 
-            <div class="cardbox">
-                <div class="card">
-                    <img src="../../../public/images/lomo-fino.jpg" alt="">
-                    <h4>Lomo Fino - Tierra Andina</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur ad nemo laudantium rem
-                        natus
-                        vitae?</p>
-                    <span>$30.000</span>
-                </div>
-                <div class="card">
-                    <img src="../../../public/images/milanesa-argentina.jpg" alt="">
-                    <h4>Milanesa - Argentina</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur ad nemo laudantium rem
-                        natus
-                        vitae?</p>
-                    <span>$30.000</span>
-                </div>
-                <div class="card">
-                    <img src="../../../public/images/COSTILLAS SAINT LOUIS.jpg" alt="">
-                    <h4>Costilla San Luis</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur ad nemo laudantium rem
-                        natus
-                        vitae?</p>
-                    <span>$30.000</span>
+
+
+        <!--========== elemento de la seccion 3 ==========-->
+        <section class="menu section bd-container" id="menu">
+            <span class="section-subtitle">Menu</span>
+            <h2 class="section-title">Platos más destacados</h2>
+
+            <div class="menu__container bd-grid">
+
+                <div class="menu__content">
+                    <img src="../../../public/images/lomo-fino.jpg" alt="" class="menu__img">
+                    <h3 class="menu__name">Lomo Fino - Tierra Andina</h3>
+                    <span class="menu__detail">Delicious dish</span>
+                    <span class="menu__preci">$22.00</span>
                 </div>
 
-            </div>
-
-        </div>
-        <!--elemento de la seccion 4-->
-        <div class="sec4">
-            <div class="content">
-                <h2>Nuevo en nuestro menú</h2>
-                <h1>Sushi samurai Salmon cheese</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum earum officiis suscipit cum totam?
-                    Dolorem.
-                </p>
-                <a href="#" class="btn">Ordena ahora<i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <div class="image">
-                <img src="../../../public/images/img6.png" alt="">
-            </div>
-        </div>
-        <!--elemento de la seccion 5-->
-        <div class="sec5">
-            <div class="newsletter">
-                <div class="image">
-                    <img src="../../../public/images/img1.png" alt="">
+                <div class="menu__content">
+                    <img src="../../../public/images/lomo-fino.jpg" alt="" class="menu__img">
+                    <h3 class="menu__name">Barbecue salad</h3>
+                    <br>
+                    <span class="menu__detail">Delicious dish</span>
+                    <span class="menu__preci">$22.00</span>
                 </div>
-                <div class="content">
-                    <h2>Novedades</h2>
-                    <h1>Suscríbete para recibir ofertas actualizadas</h1>
-                    <div class="subscribe">
-                        <input type="email" placeholder="Ingresa tu correo electronico">
-                        <button type="submit">Suscribirse</button>
-                    </div>
+
+                <div class="menu__content">
+                    <img src="../../../public/images/lomo-fino.jpg" alt="" class="menu__img">
+                    <h3 class="menu__name">Salad with fish</h3>
+                    <br>
+                    <span class="menu__detail">Delicious dish</span>
+                    <span class="menu__preci">$12.00</span>
+                </div>
+                <a href="../../home/pages/menu.html" class="button">Ver todo el menu<i
+                        class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </section>
+        <!--========== Elementos seccion 4 ==========-->
+        <section class="contact section bd-container" id="contact">
+            <div class="contact__container bd-grid">
+                <div class="contact__data">
+                    <span class="section-subtitle contact__initial">Novedades</span>
+                    <h2 class="section-title contact__initial">Suscríbete para recibir ofertas actualizadas</h2>
+                    <p class="contact__description">Vive la experiencia completa: ofertas exclusivas al suscribirte y
+                        reserva de mesa fácil y rápida con nuestro.</p>
+                </div>
+
+                <div class="contact__button">
+                    <a href="#" class="button">Suscribirse <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--========== FOOTER ==========-->
+    <footer class="footer section bd-container">
+        <div class="footer__container bd-grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo"><img src="public/images/logo5.jpg" alt="s"></a>
+                <span class="footer__description">Restaurante</span>
+                <div>
+                    <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
                 </div>
             </div>
 
+            <div class="footer__content">
+                <h3 class="footer__title">Servicios</h3>
+                <ul>
+                    <li><a href="#" class="footer__link">Precios</a></li>
+                    <li><a href="#" class="footer__link">Reservacion</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Informacion</h3>
+                <ul>
+                    <li><a href="#" class="footer__link">Contactos</a></li>
+                    <li><a href="#" class="footer__link">Politicas y Privacidad</a></li>
+                    <li><a href="#" class="footer__link">Terminos y condiciones</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Dirección</h3>
+                <ul>
+                    <li>Popayán - Colombia</li>
+                    <li>Cl. 17 Nte. ##808</li>
+                    <li>999 - 888 - 777</li>
+                    <li>tastyfood@email.com</li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <!-- Script -->
-    <script src="../js/nav.js"></script>
+
+        <p class="footer__copy">&#169; 2025 Todos los derechos reservados</p>
+    </footer>
+
+    <!--========== SCROLL REVEAL ==========-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--========== MAIN JS ==========-->
+    <script src="../../js/index.js"></script>
 </body>
 
 </html>

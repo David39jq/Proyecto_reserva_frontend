@@ -1,90 +1,263 @@
-/* Importing Google Fonts - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*===== VARIABLES CSS =====*/
 :root {
-  --black: #000000;
-  --white-smoke: #F2F2F2;
-  --dark-slate-gray: #044040;/*Titulos*/
-  --dark-teal: #033636;
-  --dark-slate-gray-rgba: rgba(4, 64, 64, 0.712); /*Botones:hover*/
-  --dark-goldernrod: #F2A71B;
-  --medium-gray:#808080;
-  --light-brown:#ffbf00;
-  --Beige:#F5F5DC;
-  --dark-bronze: rgba(38, 44, 58, 1);
+  --header-height: 3rem;
 
+  /*========== Colores ==========*/
+  --first-color: #069C54;
+  --first-color-alt: #048654;
+  --title-color: #393939;
+  --text-color: #707070;
+  --text-color-light: #A6A6A6;
+  --body-color: #F2F2F2;
+  --container-color: #FFFFFF;
 
-  --grey: rgba(66, 65, 65, 0.096);
-  --dark-bronze: rgba(38, 44, 58, 1);
+  /*========== Fuente y tipografía ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 2.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Fuente ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Margenes ==========*/
+  --mb-1: .5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
 }
 
-* {
-  margin: 0;
-  padding: 0;
+
+/*========== BASE ==========*/
+*,::before,::after{
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-body {
-  min-height: 100vh;
-  background-color: var(--white-smoke);
 }
 
-/*HEADER PAGINA*/
-.logo{
-  margin: 20px;
+html{
+  scroll-behavior: smooth;
+}
+
+/*========== Variables Tema oscuro ==========*/
+body.dark-theme{
+  --title-color: #F1F3F2;
+  --text-color: #C7D1CC;
+  --body-color: #1D2521;
+  --container-color: #27302C;
+}
+
+/*========== Botón Oscuro/Claro ==========*/
+.change-theme{
+  position: absolute;
+  right: 1rem;
+  top: 1.8rem;
+  color: var(--text-color);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+body{
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h1,h2,h3,p,ul{
+  margin: 0;
+}
+
+ul{
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  max-width: 80%;
+  height: auto;
+}
+
+/*========== CLASE CSS ==========*/
+.section{
+  padding: 4rem 0 2rem;
+}
+
+.section-title, .section-subtitle{
   text-align: center;
 }
 
-nav{
-position: center;
-align-items: center;
-gap: 45%;
-width: 100%;
-background-color: transparent;
+.section-title{
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--mb-3);
 }
 
-.logo img{
-  width: 300px;
-  align-items: center;
+.section-subtitle{
+  display: block;
+  color: var(--first-color);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-1);
 }
 
-/*=====================================
-    Arreglos de la primera seccion
-=====================================*/
+/*========== LAYOUT ==========*/
+.bd-container{
+  max-width: 960px;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+}
 
-.sec1{
+.bd-grid{
+  display: grid;
+  gap: 1.5rem;
+}
+
+.l-header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+}
+
+/*========== NAV ==========*/
+.nav{
+  max-width: 1024px;
+  height: var(--header-height);
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around; /*Crea espacio entre los div*/
 }
 
-.sec1 .image img{
-  width: 50vw;
-  max-width: 700px;
-  margin-right: -5vw;
+
+.nav__item{
+  margin-bottom: var(--mb-2);
 }
 
-.sec1 .content{
-  width: 50vw;
-  padding: 7%;
+.nav__link, .nav__logo, .nav__toggle{
+  color: var(--text-color);
+  font-weight: var(--font-medium);
 }
 
-.sec1 .content h1{
-  color: var(--dark-slate-gray);
-  font-size: 55px;
-  margin-bottom: 15px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+.nav__logo:hover{
+  color: var(--first-color);
 }
 
-.sec1 .content p{
-  color: rgb(109, 97, 110);/*-----------------------------*/
-  margin-bottom: 30px;
+.nav__link{
+  transition: .3s;
 }
 
-/*Ajustes del boton order now (ordenar ahora)*/
+.nav__link:hover{
+  color: var(--first-color);
+}
+
+.nav__toggle{
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+/* Mostrar menú */
+.show-menu{
+  top: var(--header-height);
+}
+
+/*Menú activo*/
+.active-link{
+  color: var(--first-color);
+}
+
+/*Cambiar el encabezado de fondo*/
+.scroll-header{
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+/* Desplazarse hacia arriba */
+.scrolltop{
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .3rem;
+  background: rgba(6,156,84,.5);
+  border-radius: .4rem;
+  z-index: var(--z-tooltip);
+  transition: .4s;
+  visibility: hidden;
+}
+
+.scrolltop:hover{
+  background-color: var(--first-color-alt);
+}
+
+.scrolltop__icon{
+  font-size: 1.8rem;
+  color: var(--body-color);
+}
+
+/* Mostrar desplazamiento superior */
+.show-scroll{
+  visibility: visible;
+  bottom: 1.5rem;
+}
+
+/*========== HOME ==========*/
+.home__container{
+  height: calc(100vh - var(--header-height));
+  align-content: center;
+}
+
+.home__title{
+  font-size: var(--biggest-font-size);
+  color: var(--first-color);
+  margin-bottom: var(--mb-1);
+}
+
+.home__subtitle{
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--mb-4);
+}
+
+.home__img{
+  width: 300px;
+  justify-self: center;
+}
+
+/*========== BUTTONS ==========*/
+.button{
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #FFF;
+  padding: .75rem 1rem;
+  border-radius: .5rem;
+  transition: .3s;
+}
 
 .btn{
-  background-color: var(--dark-slate-gray);
-  color: var(--white-smoke);
+  background-color: var(--first-color-alt);
+  color: var(--container-color);
   display: inline-flex;
   align-items: center;
   padding: 20px 30px;
@@ -99,219 +272,265 @@ background-color: transparent;
 }
 
 .btn:hover{ /*:hocer se usa para que cuando pase el cursor cambie de color*/
-  background-color: var(--dark-slate-gray-rgba); /*el rgba se usa para poder usar la tecnica de la opacocidad caundo pase el cursos*/
+  background-color: var(--first-color-alt); /*el rgba se usa para poder usar la tecnica de la opacocidad caundo pase el cursos*/
   transform: translateX(20px);/*lo que se hace aqui es que caundo pase el cursos el boron de mueva*/
 }
 
-/*=====================================
-    Arreglos de la segunda seccion
-=====================================*/
-
-.sec2{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 0 5%;
+.button:hover{
+  background-color: var(--first-color-alt);
 }
 
-.sec2 .image img{
-  width: 40vw;
-  max-width: 600px;
-}
-
-.sec2 .content{
-  max-width: 40vw;
-}
-
-.sec2 h2{
-  font-family: Cedarville cursive, cursive;
-  font-size: 30px;
-  color: var(--dark-teal);
-}
-
-.sec2 .content h1{
-  color: var(--dark-slate-gray);
-  font-size: 45px;
-  margin-bottom: 15px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.sec2 .content p{
-  color: var(--light-gray);/*---------------------------------------------*/
-  margin-bottom: 30px;
-  font-size: 15px;
-  line-height: 20px;
-}
-
-/*=====================================
-    Arreglos de la tercera seccion
-=====================================*/
-
-.sec3{
-  padding: 7% 5%;
+/*========== ABOUT ==========*/
+.about__data{
   text-align: center;
-
 }
 
-.sec3 h1{
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 45px;
+.about__description{
+  margin-bottom: var(--mb-3);
 }
 
-.sec3 .cardbox{
-  padding: 70px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+.about__img{
+  width: 280px;
+  border-radius: .5rem;
+  justify-self: center;
 }
 
-.card{
-  width: 270px;
-  padding: 40px 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 40px var(--grey);/*Lo que hace este elementos es crear sombras al rededor*/
+/*========== MENU ==========*/
+.menu__container{
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
   cursor: pointer;
-  transition: all 0.3s;
 }
 
-.card:hover{
-  box-shadow: 0 0 100px var(--dark-goldernrod);
-  transform: scale(1.02); /*Lo que hace es trasformas la tarjeta un poco mas grande*/
+.menu__content{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--container-color);
+  border-radius: .5rem;
+  box-shadow: 0 2px 4px rgba(3,74,40,.15);
+  padding: .75rem;
+  border-radius: 15px;
 }
 
-.card img{
+.menu__img{
   width: 150px;
-  height: 150px;
-  margin-bottom: 15px;
+  height: 130px;
+  align-self: center;
+  margin-bottom: var(--mb-2);
   border-radius: 15px;
 }
 
-.card h4, .card p, .card span{/*Se le dan todos los ajustes a todos estos elementos*/
-  text-align: left;
-  margin-bottom: 15px;
+.menu__name, .menu__preci{
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+
+.menu__name{
+  font-size: var(--normal-font-size);
+}
+
+.menu__detail, .menu__preci{
+  font-size: var(--small-font-size);
+}
+
+.menu__detail{
+  margin-bottom: var(--mb-1);
+}
+
+.menu__content:hover{
+  box-shadow: 0 0 75px rgb(0, 255, 13);
+}
+
+/*========== CONTACT ==========*/
+.contact__container{
+  text-align: center;
+}
+
+.contact__description{
+  margin-bottom: var(--mb-3);
+}
+
+/*========== FOOTER ==========*/
+.footer__container{
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  row-gap: 2rem;
+}
+
+.footer__logo{
+  font-size: var(--h3-font-size);
+  color: var(--first-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.footer__description{
   display: block;
+  font-size: var(--small-font-size);
+  margin: .25rem 0 var(--mb-3);
 }
 
-.card p{ /*Arreglar el desbordamiento de texto*/
-  font-size: 13px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2; /*este elemto doce que o pueden haber mas de 2 lineas*/
-  overflow: hidden;
-  text-overflow: ellipsis;
+.footer__social{
+  font-size: 1.5rem;
+  color: var(--title-color);
+  margin-right: var(--mb-2);
 }
 
-.card span{
-  color: var(--dark-teal);
-  font-weight: 700;
+.footer__title{
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--mb-2);
 }
 
-/*=====================================
-    Arreglos de la Cuarta seccion
-=====================================*/
-
-.sec4{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.footer__link{
+  display: inline-block;
+  color: var(--text-color);
+  margin-bottom: var(--mb-1);
 }
 
-.sec4 .image img{
-  width: 40vw;
-  max-width: 700px;
-  margin-top: -50px;
+.footer__link:hover{
+  color: var(--first-color);
 }
 
-.sec4 .content{
-  width: 50vw;
-  padding: 7%;
+.footer__copy{
+  text-align: center;
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  margin-top: 3.5rem;
 }
 
-.sec4 .content h1{
-  color: var(--dark-slate-gray);
-  font-size: 55px;
-  margin-bottom: 15px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+/*======================
+      MEDIA QUERIES
+======================*/
+@media screen and (min-width: 576px){
+  .home__container,
+  .about__container,
+  .app__container{
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+  }
+
+  .about__data, .about__initial,
+  .app__data, .app__initial,
+  .contact__container, .contact__initial{
+    text-align: initial;
+  }
+
+  .about__img, .app__img{
+    width: 380px;
+    order: -1;
+  }
+
+  .contact__container{
+    grid-template-columns: 1.75fr 1fr;
+    align-items: center;
+  }
+  .contact__button{
+    justify-self: center;
+  }
 }
 
-.sec4 .content p{
-  color: var(--light-gray);
-  margin-bottom: 30px;
-
+@media screen and (max-width: 768px){
+  .nav__menu{
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 0 1rem;
+    text-align: center;
+    background-color: var(--body-color);
+    transition: .4s;
+    box-shadow: 0 4px 4px rgba(0,0,0,.1);
+    border-radius: 0 0 1rem 1rem;
+    z-index: var(--z-fixed);
+  }
 }
 
-.sec4 h2{
-  font-family: Cedarville cursive, cursive;
-  font-size: 30px;
-  color: var(--dark-teal);
+@media screen and (min-width: 768px){
+  :root{
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
 }
 
-/*=====================================
-    Arreglos de la quinta seccion
-=====================================*/
-.sec5{
-  padding: 5% 10%;
-  margin: 10% 0;
+@media screen and (min-width: 768px){
+  body{
+    margin: 0;
+  }
+
+  .section{
+    padding-top: 8rem;
+  }
+
+  .nav{
+    height: calc(var(--header-height) + 1.5rem);
+  }
+  .nav__list{
+    display: flex;
+  }
+  .nav__item{
+    margin-left: var(--mb-5);
+    margin-bottom: 0;
+  }
+  .nav__toggle{
+    display: none;
+  }
+
+  .change-theme{
+    position: initial;
+    margin-left: var(--mb-2);
+  }
+
+  .home__container{
+    height: 100vh;
+    justify-items: center;
+  }
+
+  .services__container,
+  .menu__container{
+    margin-top: var(--mb-6);
+  }
+
+  .menu__container{
+    grid-template-columns: repeat(3, 210px);
+    column-gap: 4rem;
+  }
+  .menu__content{
+    padding: 1.5rem;
+  }
+  .menu__img{
+    width: 130px;
+  }
+
+  .app__store{
+    margin: 0 var(--mb-1) 0 0;
+  }
 }
 
-.newsletter{
-  background-color: var(--dark-teal);
-  border-radius: 20px;
-  min-height: 200px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+@media screen and (min-width: 960px){
+  .bd-container{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home__img{
+    width: 500px;
+  }
+
+  .about__container,
+  .app__container{
+    column-gap: 7rem;
+  }
 }
 
-.newsletter img{
-  width: 30vw;
-  max-width: 450px;
-}
-
-.newsletter .content{
-  width: 30vw;
-}
-
-.newsletter .content h1{
-  color: var(--white-smoke);
-  font-size: 40px;
-  margin-bottom: 40px;
-  width: 80%;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.newsletter h2{
-  font-family: Cedarville cursive, cursive;
-  font-size: 30px;
-  color: var(--dark-goldernrod);
-}
-
-/*Estilo del boton*/
-
-.newsletter .subscribe{
-  padding: 10px;
-  background-color: var(--white-smoke);
-  border-radius: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.newsletter .subscribe input{
-  font-size: 15px;
-  width: 70%;
-  outline: none;
-  border: none;
-  padding: 10px;
-}
-
-.newsletter .subscribe button{
-  background-color: var(--dark-goldernrod);
-  border: none;
-  color: var(--dark-teal);
-  border-radius: 20pc;
-  font-size: 15px;
-  padding: 10px 20px;
-  cursor: pointer;
+/* For tall screens on mobiles y desktop*/
+@media screen and (min-height: 721px) {
+    .home__container {
+        height: 640px;
+    }
 }

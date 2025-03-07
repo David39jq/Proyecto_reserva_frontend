@@ -18,167 +18,91 @@
 </head>
 
 <body>
-    <!-- Botón de menú de la barra lateral móvil -->
-    <button class="sidebar-menu-button">
-        <i class="fa-solid fa-chevron-left"></i>
-    </button>
-    <aside class="sidebar">
-        <!-- Encabezado de la barra lateral -->
-        <header class="sidebar-header">
-            <a href="index.html" class="header-logo">
-                <img src="../../../public/images/user-default.png" alt="CodingNepal" />
-            </a>
-            <button class="sidebar-toggler">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
-        </header>
-        <nav class="sidebar-nav">
-            <!-- Primary Top Nav -->
-            <ul class="nav-list primary-nav">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">
-                        <i class="fa-solid fa-house"></i>
-                        <span class="nav-label">Inicio</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="nav-item"><a class="nav-link dropdown-title">Inicio</a></li>
-                    </ul>
-                </li>
-                <!-- Dropdown -->
-                <li class="nav-item dropdown-container">
-                    <a href="menu.html" class="nav-link dropdown-toggle">
-                        <i class="fa-solid fa-utensils"></i>
-                        <span class="nav-label">Menu</span>
-                        <i class="fa-solid fa-chevron-down" id="chevron-down"></i>
-                    </a>
-                    <!-- Dropdown Menu -->
-                    <ul class="dropdown-menu">
-                        <li class="nav-item"><a class="nav-link dropdown-title">Menu</a></li>
-                        <li class="nav-item"><a href="menu.html" class="nav-link dropdown-link">Nuestro Menu</a></li>
-                        <li class="nav-item"><a href="menu.html" class="nav-link dropdown-link">Platos</a></li>
-                        <li class="nav-item"><a href="menu.html" class="nav-link dropdown-link">Bebidad</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="reserve.html" class="nav-link">
-                        <i class="fa-solid fa-calendar-days"></i>
-                        <span class="nav-label">Reservacion</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="nav-item"><a class="nav-link dropdown-title">Reservacion</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">
-                        <i class="fa-solid fa-address-card"></i>
-                        <span class="nav-label">Nosotros</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="nav-item"><a class="nav-link dropdown-title">Nosotros</a></li>
-                    </ul>
-                </li>
-                <!-- Menú desplegable -->
+    <header class="l-header" id="header">
+        <nav class="nav bd-container">
+            <a href="#" class="nav__logo"><img src="public/images/logo5.jpg" alt=""></a>
 
-                <li class="nav-item">
-                    <a href="login.html" class="nav-link">
-                        <i class="fa-solid fa-user"></i>
-                        <span class="nav-label">Mi Cuenta</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="nav-item"><a class="nav-link dropdown-title">Mi Cuenta</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <!-- Secondary Bottom Nav -->
-            <ul class="nav-list secondary-nav">
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="fa-solid fa-right-from-bracket"></i>
-                        <span class="nav-label">Salir</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="nav-item"><a class="nav-link dropdown-title">Salir</a></li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link active-link">Inicio</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">Nosotros</a></li>
+                    <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
+                    <li class="nav__item"><a href="src/home/pages/reserve.html" class="nav__link">Reservacion</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contactos</a></li>
+
+                    <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
         </nav>
-    </aside>
-    <div class="Content">
-        <div class="header" id="id-header">
-            <div class="header" id="id-header">
-                <nav><!--elemento Para barra ade navegacion-->
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="../../../public/images/logo5.jpg" alt="">
-                        </a>
-                    </div>
-                </nav>
+    </header>
+    <div class="wrapper">
+        <h1>Nuestro Menu</h1>
+        <!-- filtrar elementos -->
+        <nav>
+            <div class="items">
+                <span class="item active" data-name="all">Todos</span>
+                <span class="item" data-name="platos">Platos</span>
+                <span class="item" data-name="bebida">Bebidas</span>
             </div>
-        </div>
-        <div class="wrapper">
-            <h1>Nuestro Menu</h1>
-            <!-- filtrar elementos -->
-            <nav>
-                <div class="items">
-                    <span class="item active" data-name="all">Todos</span>
-                    <span class="item" data-name="platos">Platos</span>
-                    <span class="item" data-name="bebida">Bebidas</span>
-                </div>
-            </nav>
-            <!-- filter Images -->
-            <div class="gallery">
-                <div class="menu">
-                    <div class="menu-box">
-                        <div class="image" data-name="platos">
-                            <div class="menu-card" data-name="platos"><!--tajeta del menu-->
-                                <img src="../../../public/images/lomo-fino.jpg" alt="">
-                                <h4>Lomo Fino - Tierra Andina</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores consequatur a
-                                    voluptatum
-                                    tempore
-                                    laudantium enim ad pariatur repellendus. Sequi, voluptates.</p>
-                                <span>$ 20.000</span>
-                            </div>
+        </nav>
+        <!-- filter Images -->
+        <div class="gallery">
+            <div class="menu">
+                <div class="menu-box">
+                    <div class="image" data-name="platos">
+                        <div class="menu-card" data-name="platos"><!--tajeta del menu-->
+                            <img src="../../../public/images/lomo-fino.jpg" alt="">
+                            <h4>Lomo Fino - Tierra Andina</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores consequatur a
+                                voluptatum
+                                tempore
+                                laudantium enim ad pariatur repellendus. Sequi, voluptates.</p>
+                            <span>$ 20.000</span>
                         </div>
-                        <div class="image" data-name="platos">
-                            <div class="menu-card" data-name="platos"><!--tajeta del menu-->
-                                <img src="../../../public/images/COSTILLAS SAINT LOUIS.jpg" alt="">
-                                <h4>Lomo Fino - Tierra Andina</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores consequatur a
-                                    voluptatum
-                                    tempore
-                                    laudantium enim ad pariatur repellendus. Sequi, voluptates.</p>
-                                <span>$ 20.000</span>
-                            </div>
+                    </div>
+                    <div class="image" data-name="platos">
+                        <div class="menu-card" data-name="platos"><!--tajeta del menu-->
+                            <img src="../../../public/images/COSTILLAS SAINT LOUIS.jpg" alt="">
+                            <h4>Lomo Fino - Tierra Andina</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores consequatur a
+                                voluptatum
+                                tempore
+                                laudantium enim ad pariatur repellendus. Sequi, voluptates.</p>
+                            <span>$ 20.000</span>
                         </div>
-                        <div class="image" data-name="bebida">
-                            <div class="menu-card" data-name="platos"><!--tajeta del menu-->
-                                <img src="../../../public/images/milanesa-argentina.jpg" alt="">
-                                <h4>Lomo Fino - Tierra Andina</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores consequatur a
-                                    voluptatum
-                                    tempore
-                                    laudantium enim ad pariatur repellendus. Sequi, voluptates.</p>
-                                <span>$ 20.000</span>
-                            </div>
+                    </div>
+                    <div class="image" data-name="bebida">
+                        <div class="menu-card" data-name="platos"><!--tajeta del menu-->
+                            <img src="../../../public/images/milanesa-argentina.jpg" alt="">
+                            <h4>Lomo Fino - Tierra Andina</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores consequatur a
+                                voluptatum
+                                tempore
+                                laudantium enim ad pariatur repellendus. Sequi, voluptates.</p>
+                            <span>$ 20.000</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- cuadro de vista previa de imagen en pantalla completa -->
-        <div class="preview-box">
-            <div class="details">
-                <span class="title">Image Category: <p></p></span>
-                <span class="icon fas fa-times"></span>
-            </div>
-            <div class="image-box"><img src="" alt=""></div>
-        </div>
-        <div class="shadow"></div>
     </div>
-    <script src="../js/menu.js"></script>
+    <!-- cuadro de vista previa de imagen en pantalla completa -->
+    <div class="preview-box">
+        <div class="details">
+            <span class="title">Image Category: <p></p></span>
+            <span class="icon fas fa-times"></span>
+        </div>
+        <div class="image-box"><img src="" alt=""></div>
+    </div>
+    <div class="shadow"></div>
+    </div>
+    <script src="../../js/menu.js"></script>
     <!-- Script -->
-    <script src="../js/nav.js"></script>
+    <script src="../../js/index.js"></script>
 </body>
 
 </html>

@@ -1,29 +1,29 @@
-/*==================== SHOW MENU ====================*/
+/*==================== MOSTRAR MENÚ====================*/
 const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId)
     
-    // Validate that variables exist
+    // Validar que existan variables
     if(toggle && nav){
         toggle.addEventListener('click', ()=>{
-            // We add the show-menu class to the div tag with the nav__menu class
+            // Agregamos la clase show-menu a la etiqueta div con la clase nav__menu
             nav.classList.toggle('show-menu')
         })
     }
 }
 showMenu('nav-toggle','nav-menu')
 
-/*==================== REMOVE MENU MOBILE ====================*/
+/*==================== ELIMINAR MENÚ MÓVIL ====================*/
 const navLink = document.querySelectorAll('.nav__link')
 
 function linkAction(){
     const navMenu = document.getElementById('nav-menu')
-    // When we click on each nav__link, we remove the show-menu class
+    // Cuando hacemos clic en cada enlace nav__link, eliminamos la clase show-menu
     navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+/*===================== SECCIONES DE DESPLAZAMIENTO ENLACE ACTIVO =====================*/
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
@@ -43,7 +43,7 @@ function scrollActive(){
 }
 window.addEventListener('scroll', scrollActive)
 
-/*==================== CHANGE BACKGROUND HEADER ====================*/ 
+/*==================== CAMBIAR ENCABEZADO DE FONDO =====================*/
 function scrollHeader(){
     const nav = document.getElementById('header')
     // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
@@ -51,7 +51,7 @@ function scrollHeader(){
 }
 window.addEventListener('scroll', scrollHeader)
 
-/*==================== SHOW SCROLL TOP ====================*/ 
+/*==================== MOSTRAR DESPLAZAMIENTO SUPERIOR =====================*/
 function scrollTop(){
     const scrollTop = document.getElementById('scroll-top');
     // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
@@ -59,37 +59,37 @@ function scrollTop(){
 }
 window.addEventListener('scroll', scrollTop)
 
-/*==================== DARK LIGHT THEME ====================*/ 
+/*===================== TEMA OSCURO-CLARO ====================*/
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'bx-sun'
 
-// Previously selected topic (if user selected)
+// Tema seleccionado previamente (si fue seleccionado por el usuario)
 const selectedTheme = localStorage.getItem('selected-theme')
 const selectedIcon = localStorage.getItem('selected-icon')
 
-// We obtain the current theme that the interface has by validating the dark-theme class
+// Obtenemos el tema actual que tiene la interfaz validando la clase dark-theme
 const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
 const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx-moon' : 'bx-sun'
 
-// We validate if the user previously chose a topic
+// Validamos si el usuario eligió previamente un tema
 if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+  // Si se cumple la validación preguntamos cuál fue el problema para saber si activamos o desactivamos la oscuridad.
   document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
   themeButton.classList[selectedIcon === 'bx-moon' ? 'add' : 'remove'](iconTheme)
 }
 
-// Activate / deactivate the theme manually with the button
+// Activar/desactivar el tema manualmente con el botón
 themeButton.addEventListener('click', () => {
-    // Add or remove the dark / icon theme
+    //Agrega o elimina el tema oscuro/icono
     document.body.classList.toggle(darkTheme)
     themeButton.classList.toggle(iconTheme)
-    // We save the theme and the current icon that the user chose
+    //Guardamos el tema y el icono actual que eligio el usuario
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
-/*==================== SCROLL REVEAL ANIMATION ====================*/
+/*==================== ANIMACIÓN DE REVELACIÓN DE DESPLAZAMIENTO =====================*/
 const sr = ScrollReveal({
     origin: 'top',
     distance: '30px',

@@ -2,144 +2,60 @@
 <html lang="es">
 
 <head>
-    <link rel="stylesheet" href="../../styles/index.css">
-    <link rel="stylesheet" href="../../styles/login.css">
-    <link rel="stylesheet" href="../../styles/nav.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--========== BOX ICONS ==========-->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!--icons styles-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="../../styles/index.css">
+
     <title>Inicio de sesion</title>
 </head>
 
 <body>
-    <!-- Botón de menú de la barra lateral móvil -->
-    <button class="sidebar-menu-button">
-        <i class="fa-solid fa-chevron-left"></i>
-    </button>
-    <aside class="sidebar">
-        <!-- Encabezado de la barra lateral -->
-        <header class="sidebar-header">
-            <a href="index.html" class="header-logo">
-                <img src="../../../public/images/user-default.png" alt="CodingNepal" />
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bx-chevron-up scrolltop__icon'></i>
+    </a>
+
+    <!--========== HEADER ==========-->
+    <header class="l-header" id="header">
+        <nav class="nav bd-container">
+            <a href="#" class="nav__logo">
+                <h1 id="Logo_res">LUSAIL ROYAL</h1><img src="../../../public/images/logo10.jpg" alt="">
             </a>
-            <button class="sidebar-toggler">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
-        </header>
-        <nav class="sidebar-nav">
-            <!-- Primary Top Nav -->
-            <ul class="nav-list primary-nav">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">
-                        <i class="fa-solid fa-house"></i>
-                        <span class="nav-label">Inicio</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="nav-item"><a class="nav-link dropdown-title">Inicio</a></li>
-                    </ul>
-                </li>
-                <!-- Dropdown -->
-                <li class="nav-item dropdown-container">
-                    <a href="menu.html" class="nav-link dropdown-toggle">
-                        <i class="fa-solid fa-utensils"></i>
-                        <span class="nav-label">Menu</span>
-                        <i class="fa-solid
-                    fa-chevron-down" id="chevron-down"></i>
-                    </a>
-                    <!-- Dropdown Menu -->
-                    <ul class="dropdown-menu">
-                        <li class="nav-item"><a class="nav-link dropdown-title">Menu</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link dropdown-link">Platos</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link dropdown-link">Bebidad</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="reserve.html" class="nav-link">
-                        <i class="fa-solid fa-calendar-days"></i>
-                        <span class="nav-label">Reservacion</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="nav-item"><a class="nav-link dropdown-title">Reservacion</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">
-                        <i class="fa-solid fa-address-card"></i>
-                        <span class="nav-label">Nosotros</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="nav-item"><a class="nav-link dropdown-title">Nosotros</a></li>
-                    </ul>
-                </li>
-                <!-- Menú desplegable -->
 
-                <li class="nav-item">
-                    <a href="login.html" class="nav-link">
-                        <i class="fa-solid fa-user"></i>
-                        <span class="nav-label">Mi Cuenta</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="nav-item"><a class="nav-link dropdown-title">Mi Cuenta</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <!-- Secondary Bottom Nav -->
-            <ul class="nav-list secondary-nav">
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="fa-solid fa-right-from-bracket"></i>
-                        <span class="nav-label">Salir</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="nav-item"><a class="nav-link dropdown-title">Salir</a></li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Inicio</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">Nosotros</a></li>
+                    <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
+                    <li class="nav__item"><a href="reserve.html" class="nav__link">Reservacion</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contactos</a></li>
+                    <li class="nav__item"><a href="login.html" class="nav__link"><i class="fa-solid fa-user"></i></a>
+                    </li>
+                    <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
         </nav>
-    </aside>
-    <div class="Content">
-        <div class="header" id="id-header">
-            <div class="header" id="id-header">
-                <nav><!--elemento Para barra ade navegacion-->
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="../../../public/images/logo5.jpg" alt="">
-                        </a>
-                    </div>
-                </nav>
-            </div>
-        </div>
-        <div class="Sidebar"></div>
-        <div class="Content">
-            <div class="login-container">
-                <div class="login-image">
-                    <img src="../../../public/images/img9.png" alt="">
-                </div>
+    </header>
+    <!--========== SCROLL REVEAL ==========-->
+    <script src="https://unpkg.com/scrollreveal"></script>
 
-                <div class="login">
-                    <h2>Inicio de Sesion</h2>
-                    <form>
-                        <label for="email">Correo Electronico</label>
-                        <input type="email" placeholder="Correo Electronico">
-                        <label for="password">Contraseña</label>
-                        <input type="password" placeholder="Contraseña">
-
-                        <p class="forgot">¿Olvide mi contraseña?</p>
-                        <a href="#" class="btn">Inicio de sesion</a>
-                        <p class="signup">¿No tienes una cuenta? <a href="sign-up.html"><span
-                                    id="regis">Regístrate</span></a>
-                        </p>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="Footer"></div>
-    </div>
-
-    <!-- Script -->
-    <script src="../js/nav.js"></script>
+    <!--========== MAIN JS ==========-->
+    <script src="../../js/index.js"></script>
 </body>
 
 </html>

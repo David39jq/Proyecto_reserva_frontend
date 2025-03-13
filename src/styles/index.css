@@ -9,6 +9,7 @@
   /*========== Colores ==========*/
   --title-color: #044040;
   --first-color: #044040;
+  --first-color-rgba: rgba(4, 64, 64, 0.5);
   --first-color-alt: #F2A71B;
   --title-color-2: #022626;
   --text-color: #000000;
@@ -77,6 +78,7 @@ body.dark-theme{
   --container-color-text:#F1F3F2;
   --first-color: #F2A71B;
   --text-color-button: #FFFFFF;
+  --first-color-rgba: rgba(242, 167, 27, 0.5);
 }
 /*========== Botón Oscuro/Claro ==========*/
 .change-theme{
@@ -194,7 +196,9 @@ img{
   font-weight: var(--font-medium);
 }
 
-
+.nav__logo{
+  color: var(--title-color);
+}
 
 .nav__logo:hover{
   color: var(--first-color-alt);
@@ -238,7 +242,7 @@ img{
   justify-content: center;
   align-items: center;
   padding: .3rem;
-  background: rgba(4,64,64,.5);
+  background: var(--first-color-rgba);
   border-radius: .4rem;
   z-index: var(--z-tooltip);
   transition: .4s;
@@ -395,10 +399,8 @@ img{
   row-gap: 2rem;
 }
 
-.footer__logo{
-  font-size: var(--h3-font-size);
-  color: var(--first-color);
-  font-weight: var(--font-semi-bold);
+#logo_res{
+  color: var(--title-color);
 }
 
 .footer__description{

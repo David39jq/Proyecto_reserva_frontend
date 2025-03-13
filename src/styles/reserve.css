@@ -1,22 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 /* =============================
 			GLOBALS
 ===============================*/
-
 :root {
-    --black: #000000;
-    --dark-teal: #011F26;
-    --dark-slate-gray: #044040;/*Titulos*/
-    --dark-slate-gray-rgba: rgba(4, 64, 64, 0.712); /*Botones:hover*/
-    --dark-goldernrod: #F2A71B;
-    --white-smoke: #F2F2F2;
-    --grey: rgba(66, 65, 65, 0.096);
-    --light-gray: rgb(109, 97, 110);
-    --dark-gray:rgb(128, 128, 128);
-    --dark-bronze: rgba(38, 44, 58, 1);
-    --lighr-gray-rgba: rgba(255, 0, 0, 0.1);
-    --gray-dark-rgba: rgba(255, 255, 255, 0.5);
-    --light-orange: rgb(254, 233, 209);
+
+  /*========== Colores ==========*/
+  --prueba-color: red;
+  --title-color: #044040;
+  --first-color: #044040;
+  --first-color-alt: #F2A71B;
+  --title-color-2: #022626;
+  --text-color: #000000;
+  --text-color-light: #808080;
+  --body-color: #F2F2F2;
+  --container-color: #FFFFFF;
+  --text-color-button: #FFFFFF;
+  --menu-cards: #C2B280;
+
+  /*========== Fuente y tipografía ==========*/
+  --body-font: 'Poppins', sans-serif;
 }
+
+/*========== Variables Tema oscuro ==========*/
+body.dark-theme{
+    --title-color: #C2B280;
+    --title-color-2: #F2F2F2;
+    --text-color: #F1F3F2;
+    --body-color: #1D2521;
+    --container-color: #27302C;
+    --container-color-text:#F1F3F2;
+    --first-color: #F2A71B;
+    --text-color-button: #FFFFFF;
+  }
 
 .reserve-container{
     display: flex;
@@ -38,16 +54,35 @@
     padding: 50px;
     width: 60%;
     backdrop-filter: blur(5px);/*hace qeu se desonfoqeu el fondo del formulario*/
-    background-color: var(--gray-dark-rgba); /*Darle opacidad al fondo del desenfoque*/
+    background-color: var(--container-color); /*Darle opacidad al fondo del desenfoque*/
 }
 
 .reservation form h2{
     margin-bottom: 20px;
     font-size: 30px;
-    color: var(--dark-slate-gray);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: var(--title-color);
     text-align: center;
 }
+
+.btn{
+    color: var(--text-color-button);
+    background-color: var(--first-color);
+}
+
+.btn:hover{
+    background-color: var(--menu-cards);
+}
+
+.input, .especificaciones{
+    background-color: #f5f5f5;
+}
+
+.input, .especificaciones{
+    font-family: var(--body-font);
+}
+
+
+
 
 .reservation form div{
     width: 100%;

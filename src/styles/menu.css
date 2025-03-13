@@ -37,6 +37,18 @@
     color: var(--title-color);
 }
 
+/*========== Variables Tema oscuro ==========*/
+body.dark-theme{
+  --title-color: #C2B280;
+  --title-color-2: #F2F2F2;
+  --text-color: #F1F3F2;
+  --body-color: #1D2521;
+  --container-color: #27302C;
+  --container-color-text:#F1F3F2;
+  --first-color: #F2A71B;
+  --text-color-button: #FFFFFF;
+}
+
 body{
   padding: 10px;
   background-color: var(--body-color);
@@ -136,14 +148,7 @@ body{
   box-shadow: 0 0 100px var(--menu-cards);
 }
 
-.menu-card h4, .menu-card p, .menu-card span{
-  text-align: left;
-  margin-bottom: 15px;
-  display: block;
-  color: var(--title-color);
-}
-
-.menu-card p{
+.menu-card .menu__detail{
   font-size: 13px;
   display: -webkit-box;        
   -webkit-box-orient: vertical;
@@ -152,11 +157,39 @@ body{
   text-overflow: ellipsis;
 }
 
-.menu-card span{
+
+
+/*=======*/
+.menu__name, .menu__preci{
+  font-weight: var(--font-semi-bold);
   color: var(--title-color);
-  font-weight: 700;
+  text-align: left;
+  margin-bottom: 15px;
+  display: block;
 }
 
+.menu__name{
+  font-size: var(--normal-font-size);
+}
+
+.menu__name, .menu__preci{
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+  text-align: left;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.menu__detail, .menu__preci{
+  font-size: var(--small-font-size);
+}
+
+.menu__detail{
+  margin-bottom: var(--mb-1);
+  text-align: left;
+  margin-bottom: 15px;
+  display: block;
+}
 
 
 

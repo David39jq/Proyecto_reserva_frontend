@@ -2,32 +2,43 @@
 <html lang="es">
 
 <head>
-    <link rel="stylesheet" href="../../styles/index.css">
-    <link rel="stylesheet" href="../../styles/reserve.css">
-    <link rel="stylesheet" href="../../styles/nav.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--========== BOX ICONS ==========-->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!--icons styles-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="../../styles/index.css">
+    <link rel="stylesheet" href="../../styles/reserve.css">
+
     <title>Reservacion</title>
 </head>
 
 <body>
+    <!--========== HEADER ==========-->
     <header class="l-header" id="header">
         <nav class="nav bd-container">
-            <a href="#" class="nav__logo"><img src="public/images/logo5.jpg" alt=""></a>
+            <a href="#" class="nav__logo">
+                <h1 id="Logo_res">LUSAIL ROYAL</h1><img src="../../../public/images/logo10.jpg" alt="">
+            </a>
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
 
-                    <li class="nav__item"><a href="#home" class="nav__link active-link">Inicio</a></li>
-                    <li class="nav__item"><a href="about.html" class="nav__link">Nosotros</a></li>
-                    <li class="nav__item"><a href="menu.html" class="nav__link">Menu</a></li>
+                    <li class="nav__item"><a href="index.html   " class="nav__link active-link">Inicio</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">Nosotros</a></li>
+                    <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
                     <li class="nav__item"><a href="reserve.html" class="nav__link">Reservacion</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contactos</a></li>
-
+                    <li class="nav__item"><a href="login.html" class="nav__link"><i class="fa-solid fa-user"></i></a>
+                    </li>
                     <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+
                 </ul>
             </div>
 
@@ -36,6 +47,7 @@
             </div>
         </nav>
     </header>
+
     <div class="reserve-container"><!--contenedor de las recervas-->
         <div class="reservation">
             <form>
@@ -67,7 +79,7 @@
     </div>
 
     <!-- Script -->
-    <script src="../js/nav.js"></script>
+    <script src="../../js/index.js"></script>
 
 </body>
 

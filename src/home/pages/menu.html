@@ -7,30 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filterable Image Gallery | CodingNepal</title>
 
-    <!--link styles-->
-    <link rel="stylesheet" href="../../styles/menu.css">
-    <link rel="stylesheet" href="../../styles/nav.css">
-    <link rel="stylesheet" href="../../styles/index.css">
+    <!--========== BOX ICONS ==========-->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <!--icons styles-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="../../styles/index.css">
+    <link rel="stylesheet" href="../../styles/menu.css">
 </head>
 
 <body>
+    <!--========== HEADER ==========-->
     <header class="l-header" id="header">
         <nav class="nav bd-container">
-            <a href="#" class="nav__logo"><img src="public/images/logo5.jpg" alt=""></a>
+            <a href="#" class="nav__logo">
+                <h1 id="Logo_res">LUSAIL ROYAL</h1><img src="../../../public/images/logo10.jpg" alt="">
+            </a>
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
+
                     <li class="nav__item"><a href="index.html" class="nav__link active-link">Inicio</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">Nosotros</a></li>
                     <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
-                    <li class="nav__item"><a href="src/home/pages/reserve.html" class="nav__link">Reservacion</a></li>
+                    <li class="nav__item"><a href="reserve.html" class="nav__link">Reservacion</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contactos</a></li>
-
+                    <li class="nav__item"><a href="login.html" class="nav__link"><i class="fa-solid fa-user"></i></a>
+                    </li>
                     <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+
                 </ul>
             </div>
 
@@ -39,67 +47,105 @@
             </div>
         </nav>
     </header>
-    <div class="wrapper">
-        <h1>Nuestro Menu</h1>
-        <!-- filtrar elementos -->
-        <nav>
-            <div class="items">
-                <span class="item active" data-name="all">Todos</span>
-                <span class="item" data-name="platos">Platos</span>
-                <span class="item" data-name="bebida">Bebidas</span>
-            </div>
-        </nav>
-        <!-- filter Images -->
-        <div class="gallery">
-            <div class="menu">
-                <div class="menu-box">
-                    <div class="image" data-name="platos">
-                        <div class="menu-card" data-name="platos"><!--tajeta del menu-->
-                            <img src="../../../public/images/lomo-fino.jpg" alt="">
-                            <h4>Lomo Fino - Tierra Andina</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores consequatur a
-                                voluptatum
-                                tempore
-                                laudantium enim ad pariatur repellendus. Sequi, voluptates.</p>
-                            <span>$ 20.000</span>
+    <main>
+        <div class="wrapper">
+            <h1>Nuestro Menu</h1>
+            <!-- filtrar elementos -->
+            <nav>
+                <div class="items">
+                    <span class="item active" data-name="all">Todos</span>
+                    <span class="item" data-name="platos">Platos</span>
+                    <span class="item" data-name="bebida">Bebidas</span>
+                </div>
+            </nav>
+            <!-- filter Images -->
+            <div class="gallery">
+                <div class="menu">
+                    <div class="menu-box">
+                        <div class="image" data-name="platos">
+                            <div class="menu-card" data-name="platos"><!--tajeta del menu-->
+                                <img src="../../../public/images/lomo-fino.jpg" alt="">
+                                <h4>Lomo Fino - Tierra Andina</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores consequatur a
+                                    voluptatum
+                                    tempore
+                                    laudantium enim ad pariatur repellendus. Sequi, voluptates.</p>
+                                <span>$ 20.000</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="image" data-name="platos">
-                        <div class="menu-card" data-name="platos"><!--tajeta del menu-->
-                            <img src="../../../public/images/COSTILLAS SAINT LOUIS.jpg" alt="">
-                            <h4>Lomo Fino - Tierra Andina</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores consequatur a
-                                voluptatum
-                                tempore
-                                laudantium enim ad pariatur repellendus. Sequi, voluptates.</p>
-                            <span>$ 20.000</span>
+                        <div class="image" data-name="platos">
+                            <div class="menu-card" data-name="platos"><!--tajeta del menu-->
+                                <img src="../../../public/images/COSTILLAS SAINT LOUIS.jpg" alt="">
+                                <h4>Lomo Fino - Tierra Andina</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores consequatur a
+                                    voluptatum
+                                    tempore
+                                    laudantium enim ad pariatur repellendus. Sequi, voluptates.</p>
+                                <span>$ 20.000</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="image" data-name="bebida">
-                        <div class="menu-card" data-name="platos"><!--tajeta del menu-->
-                            <img src="../../../public/images/milanesa-argentina.jpg" alt="">
-                            <h4>Lomo Fino - Tierra Andina</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores consequatur a
-                                voluptatum
-                                tempore
-                                laudantium enim ad pariatur repellendus. Sequi, voluptates.</p>
-                            <span>$ 20.000</span>
+                        <div class="image" data-name="bebida">
+                            <div class="menu-card" data-name="platos"><!--tajeta del menu-->
+                                <img src="../../../public/images/milanesa-argentina.jpg" alt="">
+                                <h4>Lomo Fino - Tierra Andina</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores consequatur a
+                                    voluptatum
+                                    tempore
+                                    laudantium enim ad pariatur repellendus. Sequi, voluptates.</p>
+                                <span>$ 20.000</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- cuadro de vista previa de imagen en pantalla completa -->
-    <div class="preview-box">
-        <div class="details">
-            <span class="title">Image Category: <p></p></span>
-            <span class="icon fas fa-times"></span>
+        <!-- cuadro de vista previa de imagen en pantalla completa -->
+    </main>
+
+    <!--========== FOOTER ==========-->
+    <footer class="footer section bd-container">
+        <div class="footer__container bd-grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo"><img src="../../../public/images/logo10.jpg" alt="s"></a>
+                <span class="footer__description">Restaurante</span>
+                <div>
+                    <a href="#" class="footer__social"><i class="fa-brands fa-facebook"></i></i></a>
+                    <a href="#" class="footer__social"><i class="fa-brands fa-instagram"></i></i></a>
+                    <a href="#" class="footer__social"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Servicios</h3>
+                <ul>
+                    <li><a href="#" class="footer__link">Precios</a></li>
+                    <li><a href="#" class="footer__link">Reservacion</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Informacion</h3>
+                <ul>
+                    <li><a href="#" class="footer__link">Contactos</a></li>
+                    <li><a href="#" class="footer__link">Politicas y Privacidad</a></li>
+                    <li><a href="#" class="footer__link">Terminos y condiciones</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Dirección</h3>
+                <ul>
+                    <li>Popayán - Colombia</li>
+                    <li>Cl. 17 Nte. ##808</li>
+                    <li>999 - 888 - 777</li>
+                    <li>tastyfood@email.com</li>
+                </ul>
+            </div>
         </div>
-        <div class="image-box"><img src="" alt=""></div>
-    </div>
-    <div class="shadow"></div>
-    </div>
+
+        <p class="footer__copy">&#169; 2025 Todos los derechos reservados</p>
+    </footer>
+
     <script src="../../js/menu.js"></script>
     <!-- Script -->
     <script src="../../js/index.js"></script>

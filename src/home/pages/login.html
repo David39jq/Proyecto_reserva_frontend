@@ -14,6 +14,7 @@
 
     <!--========== CSS ==========-->
     <link rel="stylesheet" href="../../styles/index.css">
+    <link rel="stylesheet" href="../../styles/login.css">
 
     <title>Inicio de sesion</title>
 </head>
@@ -27,22 +28,10 @@
     <!--========== HEADER ==========-->
     <header class="l-header" id="header">
         <nav class="nav bd-container">
-            <a href="#" class="nav__logo">
-                <h1 id="Logo_res">LUSAIL ROYAL</h1><img src="../../../public/images/logo10.jpg" alt="">
-            </a>
-
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-
-                    <li class="nav__item"><a href="#home" class="nav__link active-link">Inicio</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">Nosotros</a></li>
-                    <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
-                    <li class="nav__item"><a href="reserve.html" class="nav__link">Reservacion</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contactos</a></li>
-                    <li class="nav__item"><a href="login.html" class="nav__link"><i class="fa-solid fa-user"></i></a>
-                    </li>
+                    <a href="index.html" class="button"><i class="fa-solid fa-arrow-left"></i></a>
                     <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
-
                 </ul>
             </div>
 
@@ -51,11 +40,61 @@
             </div>
         </nav>
     </header>
+
+    <main>
+        <div class="container" id="container">
+            <div class="form-container sign-up">
+                <form>
+                    <h1>Crear una cuenta</h1>
+                    <div class="social-icons">
+                        <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                    <span>O</span>
+                    <input type="text" placeholder="Nombre">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Contraseña">
+                    <button>Registrarse</button>
+                </form>
+            </div>
+            <div class="form-container sign-in">
+                <form>
+                    <h1>Iniciar sesión</h1>
+                    <div class="social-icons">
+                        <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                    <span>O</span>
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Contraseña">
+                    <a href="#">¿Olvidó su contraseña?</a>
+                    <button>Iniciar sesión</button>
+                </form>
+            </div>
+            <div class="toggle-container">
+                <div class="toggle">
+                    <div class="toggle-panel toggle-left">
+                        <h1>¡Bienvenido de nuevo!</h1>
+                        <p>Introduzca sus datos personales para utilizar todas las funciones del sitio.</p>
+                        <button class="hidden" id="login">Iniciar sesion</button>
+                    </div>
+                    <div class="toggle-panel toggle-right">
+                        <h1>Hola amig@</h1>
+                        <p>Regístrese con sus datos personales para utilizar todas las funciones del sitio.</p>
+                        <button class="hidden" id="register">Registrate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
     <!--========== SCROLL REVEAL ==========-->
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <!--========== MAIN JS ==========-->
     <script src="../../js/index.js"></script>
+    <script src="../../js/login.js"></script>
 </body>
 
 </html>

@@ -8,7 +8,8 @@ app.set("view engine", "ejs");//paginas dinamicas
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
-//rutas::::::::::::::::::::::::::::::::::::::::
+//rutas dinamicas y estaticas::::::::::::::::::::::::::::::::::::::::
+app.use(require("./rutas/index"));
 app.use(express.static("public"));
 
 
@@ -21,4 +22,5 @@ app.listen(PORT, function(){
         console.log(PORT);
     }
 })
+
 

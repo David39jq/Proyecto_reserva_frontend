@@ -11,6 +11,7 @@ app.use(express.urlencoded({extended:false}));
 //rutas dinamicas y estaticas::::::::::::::::::::::::::::::::::::::::
 app.use(require("./rutas/index"));
 app.use(express.static("public"));
+app.use(require("./rutas/regUsuario"));
 
 
 //configurando el puesto del servidor

@@ -60,6 +60,9 @@
                 <div class="home__data">
                     <h1 class="home__title">Déjate cautivar</h1>
                     <h2 class="home__subtitle"> Prueba la mejor comida <br></h2>
+                    <% if(typeof mensaje != "undefined"){ %>
+                    <p><%= mensaje %></p>
+                    <% } %>
                     <a href="reserve.html" class="button">Reserva ahora <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <!--imagen de la primera seccion-->

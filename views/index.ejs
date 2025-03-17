@@ -41,6 +41,7 @@
                     <li class="nav__item"><a href="#contact" class="nav__link">Contactos</a></li>
                     <li class="nav__item"><a href="login.html" class="nav__link"><i class="fa-solid fa-user"></i></a>
                     </li>
+
                     <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
 
                 </ul>
@@ -60,10 +61,13 @@
                 <div class="home__data">
                     <h1 class="home__title">Déjate cautivar</h1>
                     <h2 class="home__subtitle"> Prueba la mejor comida <br></h2>
-                    <% if(typeof mensaje != "undefined"){ %>
-                    <p><%= mensaje %></p>
-                    <% } %>
-                    <a href="reserve.html" class="button">Reserva ahora <i class="fa-solid fa-arrow-right"></i></a>
+                    <% if(typeof mensaje !="undefined" ){ %>
+                        <p>
+                            <%= mensaje %>
+                        </p>
+                        <% } %>
+                            <a href="reserve.html" class="button">Reserva ahora <i
+                                    class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <!--imagen de la primera seccion-->
                 <img src="images/img1.png" alt="" class="home__img">
@@ -112,8 +116,7 @@
                     <span class="menu__detail">Plato delicioso</span>
                     <span class="menu__preci">$12.00</span>
                 </div>
-                <a href="menu.html" class="button">Ver todo el menu<i
-                        class="fa-solid fa-arrow-right"></i></a>
+                <a href="menu.html" class="button">Ver todo el menu<i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </section>
         <!--========== Elementos seccion 4 ==========-->

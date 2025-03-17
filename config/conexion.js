@@ -4,7 +4,7 @@ let conexion = conectar.createConnection({
     host: "localhost",
     database: "restaurante",
     user: "root",
-    password: "reserva"
+    password: ""
 });
 
 conexion.connect(function(error){

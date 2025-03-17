@@ -59,7 +59,7 @@
                 </form>
             </div>
             <div class="form-container sign-in">
-                <form>
+                <form action="/codLogin.js" method="post">
                     <h1>Iniciar sesión</h1>
                     <div class="social-icons">
                         <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
@@ -67,8 +67,8 @@
                         <a href="#" class="icon"><i class="fa-brands fa-x-twitter"></i></a>
                     </div>
                     <span>O</span>
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Contraseña">
+                    <input type="email" name="campoEma" id="campoEma" placeholder="Email">
+                    <input type="password" name="campoPass" id="campoPass" placeholder="Contraseña">
                     <a href="#">¿Olvidó su contraseña?</a>
                     <button>Iniciar sesión</button>
                 </form>

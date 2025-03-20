@@ -297,8 +297,6 @@ img{
   transition: .3s;
 }
 
-
-
 .btn{
   background-color: var(--first-color-alt);
   color: var(--first-color);
@@ -337,6 +335,14 @@ img{
   width: 280px;
   border-radius: .5rem;
   justify-self: center;
+}
+
+.home__img{
+  border-radius: 30px;
+}
+
+.about__img{
+  border-radius: 30px;
 }
 
 /*========== MENU ==========*/

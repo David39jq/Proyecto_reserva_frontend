@@ -45,6 +45,11 @@
       <!--===== LOGIN ACCESS =====-->
       <div class="login__access">
          <h1 class="login__title">Inicio de sesión</h1>
+         <% if(typeof mensaje !="undefined" ){ %>
+            <p>
+                <%= mensaje %>
+            </p>
+            <% } %>
 
          <div class="login__area">
             <form action="" class="login__form">

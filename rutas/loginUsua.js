@@ -12,7 +12,7 @@ router.post("/regUsuario", async function(req, res){
 
     try {
         const hashedpas = await bcrypt.hash(pass, saltRounds);
-        const insertar = "INSERT INTO usuario ( NOMBRE, EMAIL, PASSWORD) VALUES (?, ?, ?);"
+        const insertar = "INSERT INTO usuario ( nombre, email, password) VALUES (?, ?, ?);"
 
         conexion.query(insertar, [nom, ema, hashedpas], function(err){
             if(err){

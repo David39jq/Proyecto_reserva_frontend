@@ -47,31 +47,31 @@
             <h1 class="login__title">Regístrate</h1>
             <div class="login__area">
 
-                <form action="" class="login__form">
+                <form action="/regUsuario" class="login__form" method="post">
                     <div class="login__content grid">
                         <div class="login__box">
-                            <input type="email" id="email" required placeholder=" " class="login__input">
+                            <input type="name"  name="campoNom" id="campoNom" required placeholder=" " class="login__input">
                             <label for="email" class="login__label">Nombre</label>
 
                             <i class="fa-solid fa-address-card login__icon"></i>
                         </div>
 
                         <div class="login__box">
-                            <input type="email" id="email" required placeholder=" " class="login__input">
+                            <input type="email"name="campoEma" id="campoEma" required placeholder=" " class="login__input">
                             <label for="email" class="login__label">Correo electronico</label>
 
                             <i class="fa-solid fa-envelope login__icon"></i>
                         </div>
 
                         <div class="login__box">
-                            <input type="password" id="password" required placeholder=" " class="login__input">
+                            <input type="password" name="campoPass" id="campoPass" required placeholder=" " class="login__input">
                             <label for="password" class="login__label">Contraseña</label>
 
                             <i class="ri-eye-off-fill login__icon login__password" id="loginPassword"></i>
                         </div>
                     </div>
 
-                    <button type="submit" class="login__button">REgístrase</button>
+                    <button type="submit" class="login__button">Regístrase</button>
                 </form>
 
                 <div class="login__social">

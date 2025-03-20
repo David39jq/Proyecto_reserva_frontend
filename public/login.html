@@ -15,6 +15,7 @@
 
    <!--=============== CSS ===============-->
    <link rel="stylesheet" href="styles/login.css">
+   <link rel="stylesheet" href="styles/index.css">
 
    <title>Inicio de sesion</title>
 </head>
@@ -44,13 +45,10 @@
    <div class="login container grid" id="loginAccessRegister">
       <!--===== LOGIN ACCESS =====-->
       <div class="login__access">
-         <h1 class="login__title">Inicio de sesión</h1>
-         <% if(typeof mensaje !="undefined" ){ %>
-            <p>
-                <%= mensaje %>
-            </p>
-            <% } %>
-
+         <div class="contenedor">
+            <a href="/" class="button"><i class="fa-solid fa-arrow-left"></i></a>
+            <h1 class="login__title">Inicio de sesión</h1>
+         </div>
          <div class="login__area">
             <form action="" class="login__form">
                <div class="login__content grid">
@@ -94,14 +92,15 @@
 
             <p class="login__switch">
                ¿No tienes una cuenta?
-               <a href="Sign-up.html">Regístrate</a>
+               <a class="vinculo" href="Sign-up.html">Regístrate</a>
             </p>
          </div>
       </div>
    </div>
 
    <!--=============== MAIN JS ===============-->
-   <script src="js/login_Sign-up.js"></script>
+   <script src="js/login.js"></script>
+   <script src="js/index.js"></script>
 
 </body>
 

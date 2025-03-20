@@ -297,6 +297,8 @@ img{
   transition: .3s;
 }
 
+
+
 .btn{
   background-color: var(--first-color-alt);
   color: var(--first-color);

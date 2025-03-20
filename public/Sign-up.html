@@ -8,6 +8,9 @@
     <!--=============== REMIXICONS ===============-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
 
+    <!--========== BOX ICONS ==========-->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
     <!--========== icons styles ==========-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -15,6 +18,7 @@
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/index.css">
 
     <title>Registro</title>
 </head>
@@ -44,31 +48,38 @@
     <div class="login container grid" id="loginAccessRegister">
         <!--===== LOGIN ACCESS =====-->
         <div class="login__access">
-            <h1 class="login__title">Regístrate</h1>
+            <div class="contenedor">
+                <a href="login.html" class="button"><i class="fa-solid fa-arrow-left"></i></a>
+                <h1 class="login__title">Regístrate</h1>
+            </div>
             <div class="login__area">
-
                 <form action="/regUsuario" class="login__form" method="post">
                     <div class="login__content grid">
                         <div class="login__box">
-                            <input type="name"  name="campoNom" id="campoNom" required placeholder=" " class="login__input">
+                            <input type="name" name="campoNom" id="campoNom" required placeholder=" "
+                                class="login__input">
                             <label for="email" class="login__label">Nombre</label>
 
                             <i class="fa-solid fa-address-card login__icon"></i>
                         </div>
 
                         <div class="login__box">
-                            <input type="email"name="campoEma" id="campoEma" required placeholder=" " class="login__input">
+                            <input type="email" name="campoEma" id="campoEma" required placeholder=" "
+                                class="login__input">
                             <label for="email" class="login__label">Correo electronico</label>
 
                             <i class="fa-solid fa-envelope login__icon"></i>
                         </div>
 
                         <div class="login__box">
-                            <input type="password" name="campoPass" id="campoPass" required placeholder=" " class="login__input">
+                            <input type="password" name="campoPass" id="campoPass" required placeholder=" "
+                                class="login__input">
                             <label for="password" class="login__label">Contraseña</label>
 
-                            <i class="ri-eye-off-fill login__icon login__password" id="loginPassword"></i>
+                            <i class="ri-eye-off-fill login__icon login__password" id="logincampoPass"></i>
                         </div>
+
+
                     </div>
 
                     <button type="submit" class="login__button">Regístrase</button>
@@ -94,14 +105,15 @@
 
                 <p class="login__switch">
                     ¿Ya tienes una cuenta?
-                    <a href="login.html">Inicia sesión</a>
+                    <a class="vinculo" href="login.html">Inicia sesión</a>
                 </p>
             </div>
         </div>
     </div>
 
     <!--=============== MAIN JS ===============-->
-    <script src="js/login_Sign-up.js"></script>
+    <script src="js/sign-up.js"></script>
+    <script src="js/index.js"></script>
 
 </body>
 

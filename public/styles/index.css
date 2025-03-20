@@ -346,38 +346,79 @@ img{
 }
 
 /*========== MENU ==========*/
-.menu__container{
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
-  cursor: pointer;
+
+.menu{
+  text-align: center;
+  padding-top: 8px;
+}
+
+.menu .menu__container{
+  padding: 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap; /*lo qeu hace esto es que las tarjetas no se distorcionen cuando la pantalla sea mas pequeña*/
 }
 
 .menu__content{
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  min-width: 270px;
+  width: 270px;
+  padding: 40px 20px;
   background-color: var(--container-color);
-  border-radius: .5rem;
-  box-shadow: 0 2px 4px var(--body-color);
-  padding: .75rem;
+  padding-top: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  overflow: visible;
+  margin-bottom: 100px;
+}
+
+.menu__content:hover img{
+  margin-top: -80px;
+
+}
+.menu__content img{
+  margin-bottom: 40px;
+  width: 230px;
+  height: 230px;
+  transition: all 0.3s;
   border-radius: 15px;
 }
 
-.menu__img{
-  width: 150px;
-  height: 130px;
-  align-self: center;
-  margin-bottom: var(--mb-2);
-  border-radius: 15px;
+.menu__content:hover{
+  box-shadow: 0 0 100px var(--menu-cards);
+}
+
+.menu__content .menu__detail{
+  font-size: 13px;
+  display: -webkit-box;        
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+/*=======*/
+.menu__name, .menu__preci{
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+  text-align: left;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.menu__name{
+  font-size: var(--normal-font-size);
 }
 
 .menu__name, .menu__preci{
   font-weight: var(--font-semi-bold);
   color: var(--title-color);
-}
-
-.menu__name{
-  font-size: var(--normal-font-size);
+  text-align: left;
+  margin-bottom: 15px;
+  display: block;
 }
 
 .menu__detail, .menu__preci{
@@ -386,11 +427,11 @@ img{
 
 .menu__detail{
   margin-bottom: var(--mb-1);
+  text-align: left;
+  margin-bottom: 15px;
+  display: block;
 }
 
-.menu__content:hover{
-  box-shadow: 0 0 75px var(--menu-cards);
-}
 
 /*========== CONTACT ==========*/
 .contact__container{

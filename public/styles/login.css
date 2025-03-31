@@ -167,6 +167,7 @@ img {
   border-radius: 1rem;
   z-index: 1;
   transition: border-color .4s;
+  color: var(--title-color-2);
 }
 
 .login__input:autofill {
